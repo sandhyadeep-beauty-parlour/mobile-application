@@ -1,0 +1,35 @@
+
+ion-slides {
+  height: 100%;
+}
+
+
+ion-slides ion-slide{
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.ion-slide-one {
+  background-image: url("../../../assets/wall.jpeg");
+}
+
+.ion-slide-two {
+  background-image: url("../../../assets/leaf.jpeg");
+}
+
+.ion-slide-three {
+  background-image: url("../../../assets/beach.jpeg");
+}
+
+
+.start-button {
+  position: fixed;
+  left: 0;
+  bottom: 39px;
+  right: 0;
+  width: 70%;
+  margin: 0 auto;
+}

@@ -1,0 +1,182 @@
+<ion-header>
+        <div style="display: flex; align-items: center; justify-content: space-between">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="width: 45px; border: 2px solid #666; padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block; margin: 10px;">
+                    <img src="../../../assets/sandhyadeep-logo.jpg">
+                </div>
+                <div style="font-size: 20px; font-style: italic; font-weight: 700;">
+                    Sandhyadeep
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="search-outline"></ion-icon>
+                </div>
+                <div>
+                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="notifications-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+</ion-header>
+
+<ion-content>
+    <ion-slides class="feed-sliders" pager="false" [options]="slideOpts">
+        <ion-slide class="feed-slider feed-slider-one">
+
+        </ion-slide>
+        <ion-slide class="feed-slider feed-slider-two">
+
+        </ion-slide>
+        <ion-slide class="feed-slider feed-slider-three">
+
+        </ion-slide>
+    </ion-slides>
+
+    <div>
+        <div class="slide_container">
+            <div class="slider s1"></div>
+            <div class="slider s2"></div>
+            <div class="slider s3"></div>
+            <div class="slider s4"></div>
+        </div>
+
+        <div class="feed-container">
+            <div class="feed-image-container">
+                <div>
+                    <div class="feed-image feed-image-hair"></div>
+                    <div class="feed-text"> Hair</div>
+                </div>
+            </div>
+            <div class="feed-image-container">
+                <div>
+                    <div class="feed-image feed-image-skin"></div>
+                    <div class="feed-text"> Skin</div>
+                </div>
+            </div>
+            <div class="feed-image-container">
+                <div>
+                    <div class="feed-image feed-image-makeup"></div>
+                    <div class="feed-text"> Makeup</div>
+                </div>
+            </div>
+            <div class="feed-image-container">
+                <div>
+                    <div class="feed-image feed-image-course"></div>
+                    <div class="feed-text"> Courses</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ion-content>
+
+
+<style>
+    .feed-sliders {
+        height: 35%;
+    }
+
+    .feed-sliders .feed-slider {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        max-height: 30em;
+    }
+
+    .feed-sliders .feed-slider-one {
+        background: url("../../../assets/beaurty-1.jpg");
+    }
+
+    .feed-sliders .feed-slider-two {
+        background: url("../../../assets/beauty-2.jpg");
+    }
+
+    .feed-sliders .feed-slider-three {
+        background: url("../../../assets/beauty-3.jpg");
+    }
+
+    .feed-container {
+        /*background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);*/
+        padding: 30px;
+        border: 1px solid #fff;
+    }
+
+    .feed-container .feed-image-container > div {
+        margin-bottom: 30px;
+        position: relative;
+        border: 1px solid #BFBFBF;
+        background-color: white;
+        box-shadow: 5px 10px 29px #aaaaaa94;
+    }
+
+    .feed-container .feed-image-container .feed-image {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        cursor: pointer;
+        background-position: center center !important;
+        height: 200px;
+    }
+
+    .feed-container .feed-image-container .feed-image-hair {
+        background-image: url("../../../assets/hair.jpeg");
+    }
+
+    .feed-container .feed-image-container .feed-image-skin {
+        background-image: url("../../../assets/skin.jpeg");
+    }
+
+    .feed-container .feed-image-container .feed-image-makeup {
+        background-image: url("../../../assets/makeup.jpeg");
+    }
+
+    .feed-container .feed-image-container .feed-image-course {
+        background-image: url("../../../assets/courses.jpeg");
+    }
+
+    .feed-container .feed-image-container .feed-text {
+        background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .slide_container {
+       height: 200px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .slide_container .slider{
+        display: inline-block;
+        height: 75%;
+        border: 1px solid #BFBFBF;
+        background-color: white;
+        box-shadow: 5px 10px 29px #aaaaaa94;
+        width: 200px;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        margin: 25px 10px;
+    }
+
+    .slide_container .slider.s1 {
+        background-image: url('../../../assets/s1.jpg');
+    }
+
+    .slide_container .slider.s2 {
+        background-image: url('../../../assets/s2.jpg');
+    }
+
+    .slide_container .slider.s3 {
+        background-image: url('../../../assets/s3.jpg');
+    }
+
+    .slide_container .slider.s4 {
+        background-image: url('../../../assets/s4.jpeg');
+    }
+
+</style>

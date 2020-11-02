@@ -1,0 +1,154 @@
+<ion-content>
+  <div class="login-main-container">
+    <div class="login-container">
+      <div class="logo-container">
+        <div class="logo-image"></div>
+        <div class="logo-text">
+          Sandhyadeep
+        </div>
+      </div>
+      <div class="form-main-container">
+        <form>
+          <div class="form-container">
+            <div class="form-input-container">
+              <input class="form-input" placeholder="Full Name" type="text"/>
+            </div>
+            <div class="form-input-container">
+              <input class="form-input" placeholder="Address" type="text"/>
+            </div>
+            <div class="form-input-container">
+              <select class="form-select">
+                <option selected class="form-option"> Selecte Status</option>
+                <option class="form-option"> Business </option>
+                <option class="form-option"> Student </option>
+                <option class="form-option"> Housewife </option>
+              </select>
+            </div>
+            <div class="form-input-container">
+              <select class="form-select">
+                <option selected class="form-option"> Selecte City</option>
+                <option class="form-option"> Ahmednagar </option>
+                <option class="form-option"> Pune </option>
+              </select>
+            </div>
+            <div class="form-input-container">
+              <input class="form-input" maxlength="10" placeholder="Contact" type="number"/>
+            </div>
+            <div class="login-button">
+              <button> Sign Up</button>
+            </div>
+            <div class="link-login" (click)="goToLogin()">
+              Already have an Account?
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+<style>
+  .login-main-container {
+    /*background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(147, 18, 152) 63%);*/
+    background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    justify-content: center;
+    align-content: center
+  }
+
+  .login-main-container .login-container {
+    width: 70%
+  }
+
+  .login-main-container .login-container .logo-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-main-container .login-container .logo-container .logo-image {
+    background-image: url("../../../assets/sandhyadeep-logo.jpg");
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    background-position: center center;
+  }
+
+  .login-main-container .login-container .logo-container .logo-text {
+    font-size: 30px;
+    font-style: italic;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px 0;
+  }
+
+  .login-main-container .login-container .form-main-container {
+  }
+
+  .login-main-container .login-container .form-main-container .form-container {
+  }
+
+  .login-main-container .login-container .form-main-container .form-container .login-button {
+    padding: 15px;
+    width: 90%;
+    margin: 30px 10px 10px;
+    border: 1px solid;
+    border-radius: 25px;
+    background: #fff;
+    text-align: center;
+  }
+
+  .login-main-container .login-container .form-main-container .form-container .login-button button {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: transparent;
+    color: rgb(97, 17, 101);
+  }
+
+  .login-main-container .login-container .form-main-container .form-container .link-login {
+    text-align: center;
+    color: #fff;
+  }
+
+  .login-main-container .login-container .form-main-container .form-container .form-input-container .form-input::placeholder {
+    color: white;
+  }
+
+  .login-main-container .login-container .form-main-container .form-container .form-input-container .form-input {
+    padding: 15px;
+    border: 1px solid #fff;
+    margin: 10px;
+    color: white;
+    border-radius: 25px;
+    background-color: transparent;
+  }
+  select.form-select {
+    padding: 15px;
+    border: 1px solid #fff;
+    margin: 10px;
+    color: white;
+    border-radius: 25px;
+    background-color: transparent;
+    width: 90%;
+  }
+  select option { color: rgb(179, 65, 183); width: 80%; border-radius: 20px;}
+  select:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+  }
+
+</style>
