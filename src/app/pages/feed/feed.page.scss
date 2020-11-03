@@ -1,0 +1,13 @@
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  .logo-text {
+    font-size: 20px; font-style: italic; font-weight: 700;
+  }
+  .slogan-text {
+    font-size: 8px;
+  }
+}
+

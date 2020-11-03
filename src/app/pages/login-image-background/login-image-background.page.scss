@@ -6,28 +6,37 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
-    color: #555;
+    color: #fff;
     text-align: center;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    //border-radius: 4px;
+    background-color: #901180;
+    border: 1px solid #901180;
     display: flex;
     align-items: center;
   }
 }
+
+input#email {
+  border: 1px solid #901180 !important;
+}
+
 .login-main-container {
   /*background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(147, 18, 152) 63%);*/
-  background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+  //background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+  background: url("src/assets/image.jpg");
   height: 100%;
   display: flex;
   font-size: 16px;
   align-items: center;
   justify-content: center;
-  align-content: center
+  align-content: center;
+  background-size: cover;
 }
 
 .login-main-container .login-container {
-  width: 70%
+  width: 80%;
+  padding: 15px;
+  background: #ffffff78;
+  border-radius: 15px;
 }
 
 .login-main-container .login-container .logo-container {
@@ -36,6 +45,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 1.2;
 }
 
 .login-main-container .login-container .logo-container .logo-image {
@@ -50,14 +60,13 @@
 }
 
 .login-main-container .login-container .logo-container .slogan-text {
-  color: white;
+  color: #901180;
   margin-bottom: 10%;
   font-size: 12px;
 }
 .login-main-container .login-container .logo-container .logo-text {
   font-size: 30px;
-  font-style: italic;
-  color: #fff;
+  color: #901180;
   font-weight: 700;
 }
 
@@ -70,17 +79,21 @@
 .login-main-container .login-container .form-main-container .form-container .link-signup{
   text-align: center;
   font-size: 12px;
-  color: #fff;
+  font-weight: bold;
+  color: #901180;
 }
 
 .login-main-container .login-container .form-main-container .form-container .login-button {
+  color: white;
   padding: 8px;
   margin: 30px 0 5px;
   display: flex;
   border-radius: 5px;
   justify-content: center;
-  background: #fff;
   text-align: center;
+  //background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+  //background: linear-gradient(214deg, #ffc3a0 -25%, #ffafbd 63%); // baby pink
+  background: linear-gradient(193deg, #cc2b5e 2%, #753a88 63%); // rani color
 }
 
 .login-main-container .login-container .form-main-container .form-container .login-button button {
@@ -88,7 +101,7 @@
   text-transform: uppercase;
   font-weight: bold;
   background: transparent;
-  color: rgb(97, 17, 101);
+  color: white;
 }
 
 .login-main-container .login-container .form-main-container .form-container .form-input-container {
