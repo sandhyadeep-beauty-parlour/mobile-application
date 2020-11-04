@@ -1,187 +1,153 @@
 <ion-header>
-        <div style="display: flex; align-items: center; justify-content: space-between">
-            <div style="display: flex; align-items: center; justify-content: space-between;">
-                <div style="width: 45px; border: 2px solid #666; padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block; margin: 10px;">
-                    <img src="../../../assets/sandhyadeep-logo.jpg">
+    <div style="display: flex; align-items: center; justify-content: space-between">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 45px; border: 2px solid #666; padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block; margin: 10px;">
+                <img src="../../../assets/sandhyadeep-logo.jpg">
+            </div>
+            <div class="logo-container">
+                <div class="logo-text">
+                    Sandhyadeep
                 </div>
-                <div class="logo-container">
-                    <div class="logo-text">
-                        Sandhyadeep
-                    </div>
-                    <div class="slogan-text">
-                        Have a hair affair with us
-                    </div>
+                <div class="slogan-text">
+                    Have a hair affair with us
                 </div>
             </div>
-<!--            <div style="display: flex; align-items: center; justify-content: space-between;">-->
-<!--                <div>-->
-<!--                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="search-outline"></ion-icon>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="notifications-outline"></ion-icon>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
+        <!--            <div style="display: flex; align-items: center; justify-content: space-between;">-->
+        <!--                <div>-->
+        <!--                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="search-outline"></ion-icon>-->
+        <!--                </div>-->
+        <!--                <div>-->
+        <!--                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="notifications-outline"></ion-icon>-->
+        <!--                </div>-->
+        <!--            </div>-->
+    </div>
 </ion-header>
 
-<ion-content>
-    <ion-slides class="feed-sliders" pager="false" [options]="slideOpts">
-        <ion-slide class="feed-slider feed-slider-one">
+<ion-content >
+    <ion-searchbar color="light" class="search-bar" placeholder="Search"></ion-searchbar>
+    <ion-slides class="feed-sliders" pager="true" [options]="slideOpts">
+        <ion-slide class="feed-images feed-slider feed-slider-one">
 
         </ion-slide>
-        <ion-slide class="feed-slider feed-slider-two">
+        <ion-slide class="feed-images feed-slider feed-slider-two">
 
         </ion-slide>
-        <ion-slide class="feed-slider feed-slider-three">
+        <ion-slide class="feed-images feed-slider feed-slider-three">
 
         </ion-slide>
     </ion-slides>
-
-    <div>
-        <div class="slide_container">
-            <div class="slider s1"></div>
-            <div class="slider s2"></div>
-            <div class="slider s3"></div>
-            <div class="slider s4"></div>
+    <div class="menu-container">
+        <div class="feed-heading">
+            <h2><b>Services</b></h2>
+        </div>
+        <div class="height-95px slide_container">
+            <div class="slider s1 filter-bright-03"></div>
+            <div class="slider s2 filter-bright-03"></div>
+            <div class="slider s3 filter-bright-03"></div>
+            <div class="slider s4 filter-bright-03"></div>
         </div>
 
-        <div class="feed-container">
-            <div class="feed-image-container">
-                <div>
-                    <div class="feed-image feed-image-hair"></div>
-                    <div class="feed-text"> Hair</div>
+        <div class="quick_menus">
+            <div class="menu-container">
+                <div class="menu-image image-1"></div>
+                <div class="menu-text">Hair Cuts</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-2"></div>
+                <div class="menu-text">Eye Brows</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-3"></div>
+                <div class="menu-text">Facials</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-4"></div>
+                <div class="menu-text">Manicure</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-5"></div>
+                <div class="menu-text">Products</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-6"></div>
+                <div class="menu-text">Upper lips</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-7"></div>
+                <div class="menu-text">Bridal Makeup</div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-image image-8"></div>
+                <div class="menu-text">Waxing</div>
+            </div>
+        </div>
+
+        <div class="feed-heading">
+            <h2><b>Packages</b></h2>
+        </div>
+        <div class="height-200px slide_container">
+            <div class="slider p1"></div>
+            <div class="slider p2"></div>
+            <div class="slider p3"></div>
+            <div class="slider p4"></div>
+        </div>
+        <div class="feed-heading">
+            <h2><b>Our Stylist</b></h2>
+        </div>
+        <div class="application-details">
+            <div class="owner-info-container">
+                <div class="owner-image">
+                    <img src="../../../assets/deepaa_bhagwat.jpg">
+                </div>
+                <div class="owner-details">
+                    <div class="owner-name">Deepaa Bhagwat</div>
+                    <div class="social-media-icons">
+                        <div><i class="media-icon fa fa-facebook"></i></div>
+                        <div><i class="media-icon fa fa-instagram"></i></div>
+                        <div><i class="media-icon fa fa-linkedin"></i></div>
+                    </div>
                 </div>
             </div>
-            <div class="feed-image-container">
+            <div>
                 <div>
-                    <div class="feed-image feed-image-skin"></div>
-                    <div class="feed-text"> Skin</div>
-                </div>
-            </div>
-            <div class="feed-image-container">
-                <div>
-                    <div class="feed-image feed-image-makeup"></div>
-                    <div class="feed-text"> Makeup</div>
-                </div>
-            </div>
-            <div class="feed-image-container">
-                <div>
-                    <div class="feed-image feed-image-course"></div>
-                    <div class="feed-text"> Courses</div>
+                    <ul>
+                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>
+                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>
+                        <li>Master Diploma in Makeup Artistry · Singapore</li>
+                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>
+                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>
+                    </ul>
                 </div>
             </div>
         </div>
+<!--        <div class="feed-container">-->
+<!--            <div class="feed-image-container">-->
+<!--                <div>-->
+<!--                    <div class="feed-image feed-image-hair"></div>-->
+<!--                    <div class="feed-text"> Hair</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="feed-image-container">-->
+<!--                <div>-->
+<!--                    <div class="feed-image feed-image-skin"></div>-->
+<!--                    <div class="feed-text"> Skin</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="feed-image-container">-->
+<!--                <div>-->
+<!--                    <div class="feed-image feed-image-makeup"></div>-->
+<!--                    <div class="feed-text"> Makeup</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="feed-image-container">-->
+<!--                <div>-->
+<!--                    <div class="feed-image feed-image-course"></div>-->
+<!--                    <div class="feed-text"> Courses</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 
 </ion-content>
 
-
-<style>
-    .feed-sliders {
-        height: 35%;
-    }
-
-    .feed-sliders .feed-slider {
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        max-height: 30em;
-    }
-
-    .feed-sliders .feed-slider-one {
-        background: url("../../../assets/beaurty-1.jpg");
-    }
-
-    .feed-sliders .feed-slider-two {
-        background: url("../../../assets/beauty-2.jpg");
-    }
-
-    .feed-sliders .feed-slider-three {
-        background: url("../../../assets/beauty-3.jpg");
-    }
-
-    .feed-container {
-        /*background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);*/
-        padding: 30px;
-        border: 1px solid #fff;
-    }
-
-    .feed-container .feed-image-container > div {
-        margin-bottom: 30px;
-        position: relative;
-        border: 1px solid #BFBFBF;
-        background-color: white;
-        box-shadow: 5px 10px 29px #aaaaaa94;
-    }
-
-    .feed-container .feed-image-container .feed-image {
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        cursor: pointer;
-        background-position: center center !important;
-        height: 200px;
-    }
-
-    .feed-container .feed-image-container .feed-image-hair {
-        background-image: url("../../../assets/hair.jpeg");
-    }
-
-    .feed-container .feed-image-container .feed-image-skin {
-        background-image: url("../../../assets/skin.jpeg");
-    }
-
-    .feed-container .feed-image-container .feed-image-makeup {
-        background-image: url("../../../assets/makeup.jpeg");
-    }
-
-    .feed-container .feed-image-container .feed-image-course {
-        background-image: url("../../../assets/courses.jpeg");
-    }
-
-    .feed-container .feed-image-container .feed-text {
-        background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
-        text-align: center;
-        font-weight: bold;
-        color: white;
-        bottom: 0;
-        width: 100%;
-        padding: 15px;
-        font-size: 20px;
-    }
-
-    .slide_container {
-       height: 200px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-    }
-    .slide_container .slider{
-        display: inline-block;
-        height: 75%;
-        border: 1px solid #BFBFBF;
-        background-color: white;
-        box-shadow: 5px 10px 29px #aaaaaa94;
-        width: 200px;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        margin: 25px 10px;
-    }
-
-    .slide_container .slider.s1 {
-        background-image: url('../../../assets/s1.jpg');
-    }
-
-    .slide_container .slider.s2 {
-        background-image: url('../../../assets/s2.jpg');
-    }
-
-    .slide_container .slider.s3 {
-        background-image: url('../../../assets/s3.jpg');
-    }
-
-    .slide_container .slider.s4 {
-        background-image: url('../../../assets/s4.jpeg');
-    }
-
-</style>
