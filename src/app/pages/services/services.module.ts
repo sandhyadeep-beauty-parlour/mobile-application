@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FeedPageRoutingModule } from './feed-routing.module';
+import { MessagesPageRoutingModule } from './services-routing.module';
 
-import { FeedPage } from './feed.page';
+import { ServicesPage } from './services.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {HeaderModule} from '../../shared-components/header-component/header-comp
     CommonModule,
     FormsModule,
     IonicModule,
-    FeedPageRoutingModule,
-    HeaderModule
+    MessagesPageRoutingModule,
+      HeaderModule
   ],
-  declarations: [FeedPage]
+  declarations: [ServicesPage]
 })
-export class FeedPageModule {}
+export class MessagesPageModule {}

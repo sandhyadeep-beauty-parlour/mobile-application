@@ -10,9 +10,18 @@ const routes: Routes = [
             {
                 path: '',
                 loadChildren: () => import('../pages/feed/feed.module').then((e) => e.FeedPageModule)
-            }, {
+            },
+            {
                 path: 'feed',
                 loadChildren: () => import('../pages/feed/feed.module').then((e) => e.FeedPageModule)
+            },
+            {
+                path: 'about-us',
+                loadChildren: () => import('../pages/about-us/about-us.module').then((e) => e.AboutUsPageModule)
+            },
+            {
+                path: 'services',
+                loadChildren: () => import('../pages/services/services.module').then((e) => e.MessagesPageModule)
             }, {
                 path: 'notifications',
                 loadChildren: () => import('../pages/notifications/notifications.module').then((e) => e.NotificationsPageModule)

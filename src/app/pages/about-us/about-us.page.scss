@@ -1,0 +1,150 @@
+.about-us-container {
+  padding: 0 15px;
+
+  .image-container {
+    padding: 15px 0;
+
+    .about-us-image {
+      .feed-sliders {
+        height: 350px;
+        border-radius: 10px;
+
+        .feed-slider {
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center center !important;
+          max-height: 30em;
+
+          &.feed-slider-one {
+            background: url("src/assets/sandhyadeep5.png");
+          }
+
+          &.feed-slider-two {
+            background: url("src/assets/sandhyadeep3.png");
+          }
+
+          &.feed-slider-three {
+            background: url("src/assets/sandhyadeep1.png");
+          }
+
+          &.feed-slider-four {
+            background: url("src/assets/sandhyadeep2.png");
+          }
+
+          &.feed-slider-five {
+            background: url("src/assets/sandhyadeep6.png");
+          }
+        }
+      }
+    }
+    .about-us-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      margin: 18px 0 5px;
+      .heading-text {
+        font-size: 20px;
+      }
+      .slogan-text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .description-container {
+    padding: 15px 0;
+    .description-toggle-menus {
+      display: flex;
+      justify-content: space-between;
+      .toggle-menu-background {
+        padding-bottom: 4px;
+        &.active {
+          border-bottom: 3px solid #cc2b5e;
+        }
+        .toggle-menu {
+          color: #666;
+          background: white;
+          &.active {
+            color: #753a88;
+            font-weight: bold;
+          }
+          &.about-us {
+
+          }
+
+          &.services {
+          }
+
+          &.owner {
+          }
+
+          &.product {
+          }
+        }
+      }
+    }
+
+    .description-data-container {
+      padding: 15px 0;
+      .about-us-page-container {
+        .tab-container {
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+        }
+        .heading-text {
+          font-size: 20px;
+        }
+        .content-div {
+          padding: 10px 0;
+          font-size: 14px;
+        }
+        .phone-number-div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .phone-icon {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: #753a88;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+          }
+        }
+        .timing {
+          color: #666;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+        }
+      }
+
+      .services-container {
+        margin-bottom: 10px;
+        .heading-text {
+          font-size: 20px;
+        }
+      }
+
+      .owner-container {
+
+      }
+
+      .product-container {
+
+      }
+    }
+
+  }
+}
+
+.padding-bottom-15 {
+  padding-bottom: 15px !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid lightgray;
+}

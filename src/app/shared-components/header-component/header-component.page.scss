@@ -1,0 +1,18 @@
+.header-container {
+  padding-bottom: 3px;
+  background: linear-gradient(305deg, #cc2b5e 2%, #753a88 63%);
+  ion-header {
+    background: white;
+  }
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  .logo-text {
+    font-size: 20px; font-weight: 700;
+  }
+  .slogan-text {
+    font-size: 8px;
+  }
+}

@@ -1,30 +1,5 @@
-<ion-header>
-    <div style="display: flex; align-items: center; justify-content: space-between">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="width: 45px; border: 2px solid #666; padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block; margin: 10px;">
-                <img src="../../../assets/sandhyadeep-logo.jpg">
-            </div>
-            <div class="logo-container">
-                <div class="logo-text">
-                    Sandhyadeep
-                </div>
-                <div class="slogan-text">
-                    Have a hair affair with us
-                </div>
-            </div>
-        </div>
-        <!--            <div style="display: flex; align-items: center; justify-content: space-between;">-->
-        <!--                <div>-->
-        <!--                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="search-outline"></ion-icon>-->
-        <!--                </div>-->
-        <!--                <div>-->
-        <!--                    <ion-icon style="font-size: 30px;margin: 0 5px; color: purple;" name="notifications-outline"></ion-icon>-->
-        <!--                </div>-->
-        <!--            </div>-->
-    </div>
-</ion-header>
-
-<ion-content >
+<sandhyadeep-header></sandhyadeep-header>
+<ion-content>
     <ion-searchbar color="light" class="search-bar" placeholder="Search"></ion-searchbar>
     <ion-slides class="feed-sliders" pager="true" [options]="slideOpts">
         <ion-slide class="feed-images feed-slider feed-slider-one">
@@ -38,53 +13,60 @@
         </ion-slide>
     </ion-slides>
     <div class="menu-container">
-        <div class="feed-heading">
-            <h2><b>Services</b></h2>
-        </div>
-        <div class="height-95px slide_container">
-            <div class="slider s1 filter-bright-03"></div>
-            <div class="slider s2 filter-bright-03"></div>
-            <div class="slider s3 filter-bright-03"></div>
-            <div class="slider s4 filter-bright-03"></div>
-        </div>
+<!--        <div class="feed-heading">-->
+<!--            <h2><b>Services</b></h2>-->
+<!--        </div>-->
+<!--        <div class="height-95px slide_container">-->
+<!--            <div class="slider s1 filter-bright-03"></div>-->
+<!--            <div class="slider s2 filter-bright-03"></div>-->
+<!--            <div class="slider s3 filter-bright-03"></div>-->
+<!--            <div class="slider s4 filter-bright-03"></div>-->
+<!--        </div>-->
 
         <div class="quick_menus">
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-1"></div>
                 <div class="menu-text">Hair Cuts</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-2"></div>
                 <div class="menu-text">Eye Brows</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-3"></div>
                 <div class="menu-text">Facials</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-4"></div>
                 <div class="menu-text">Manicure</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-5"></div>
                 <div class="menu-text">Products</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-6"></div>
                 <div class="menu-text">Upper lips</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-7"></div>
                 <div class="menu-text">Bridal Makeup</div>
             </div>
-            <div class="menu-container">
+            <div (click)="goServices()" class="menu-container">
                 <div class="menu-image image-8"></div>
                 <div class="menu-text">Waxing</div>
+            </div>
+            <div (click)="goServices()" class="menu-container">
+                <div class="menu-image image-9"></div>
+                <div class="menu-text">Courses</div>
             </div>
         </div>
 
         <div class="feed-heading">
-            <h2><b>Packages</b></h2>
+            <div class="heading-text">
+                <b>Packages</b>
+            </div>
+            <div class="know-more">See All <i class="fa fa-angle-right"></i></div>
         </div>
         <div class="height-200px slide_container">
             <div class="slider p1"></div>
@@ -93,7 +75,10 @@
             <div class="slider p4"></div>
         </div>
         <div class="feed-heading">
-            <h2><b>Our Stylist</b></h2>
+            <div class="heading-text">
+                <b>Our Stylist</b>
+            </div>
+            <div (click)="onKnowMore()" class="know-more">Know More <i class="fa fa-angle-right"></i></div>
         </div>
         <div class="application-details">
             <div class="owner-info-container">
@@ -103,9 +88,9 @@
                 <div class="owner-details">
                     <div class="owner-name">Deepaa Bhagwat</div>
                     <div class="social-media-icons">
-                        <div><i class="media-icon fa fa-facebook"></i></div>
-                        <div><i class="media-icon fa fa-instagram"></i></div>
-                        <div><i class="media-icon fa fa-linkedin"></i></div>
+                        <div class="fb-icon"><i class="media-icon fa fa-facebook"></i></div>
+                        <div class="insta-icon"><i class="media-icon fa fa-instagram"></i></div>
+                        <div class="linkedin-icon"><i class="media-icon fa fa-linkedin"></i></div>
                     </div>
                 </div>
             </div>
@@ -120,6 +105,9 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="copy-rights">
+            <i class="fa fa-copyright"></i> Copyright 2020 <br> Sandhyadeep Beauty Parlour. <br>
         </div>
 <!--        <div class="feed-container">-->
 <!--            <div class="feed-image-container">-->

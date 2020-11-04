@@ -4,7 +4,7 @@
   flex-direction: column;
   line-height: 1.2;
   .logo-text {
-    font-size: 20px; font-style: italic; font-weight: 700;
+    font-size: 20px; font-weight: 700;
   }
   .slogan-text {
     font-size: 8px;
@@ -14,16 +14,31 @@
 .search-bar {
   position: absolute;
   z-index: 999;
+  opacity: 0.5;
   .searchbar-input-container input {
     background-color: white !important;
   }
 }
-.feed-images {
-  filter: brightness(0.5);
-}
+//.feed-images {
+//  filter: brightness(0.5);
+//}
 
 .feed-sliders {
-  height: 27%;
+  height: 40%;
+}
+
+.feed-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0 5px;
+  .heading-text {
+    font-size: 24px;
+  }
+}
+
+.know-more {
+  color: #666;
 }
 
 .feed-sliders .feed-slider {
@@ -183,10 +198,11 @@
   border-radius: 10px;
   border: 1px solid lightgray;
   box-shadow: -3px 4px 25px #aaaaaa94;
+  padding: 7px;
 
   div.menu-container {
     flex-basis: 33%;
-    padding: 3%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,7 +236,9 @@
       height: 65px;
       background-size: cover;
       background-position: center center;
-      width: 65px; border: 2px solid #666; padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block; margin: 10px;
+      width: 65px;
+      border: 2px solid #666;
+      padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block;
       &.image-1 {
         background-image: url('../../../assets/haircut.jpeg');
       }
@@ -245,6 +263,9 @@
       &.image-8 {
         background-image: url('../../../assets/waxing.jpeg');
       }
+      &.image-9 {
+        background-image: url('../../../assets/courses.jpeg');
+      }
     }
     .menu-text {
       padding-top: 5px;
@@ -259,7 +280,7 @@
   display: flex;
   color: white;
   flex-direction: column;
-  background-image: url('../../../assets/back-2.jpeg');
+  background-image: url('../../../assets/back-3.jpg');
   background-size: cover;
   background-position: center center;
   //background: linear-gradient(193deg, #cc2b5e 2%, #753a88 84%);
@@ -303,10 +324,27 @@
         }
       }
     }
-
   }
 }
 
+.linkedin-icon {
+  background: #0E76A8;
+}
+.fb-icon {
+  background: #3B5998;
+}
+.insta-icon {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);;
+}
+
+.copy-rights {
+  padding: 5px 15px;
+  background: #cc2b5efa;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
 
 
 

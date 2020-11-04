@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -11,8 +12,15 @@ export class FeedPage implements OnInit {
     speed: 400,
     autoplay: true
   };
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goServices() {
+    this.router.navigate(['home/services']);
+  }
+  onKnowMore() {
+    this.router.navigate(['home/about-us']);
   }
 }
