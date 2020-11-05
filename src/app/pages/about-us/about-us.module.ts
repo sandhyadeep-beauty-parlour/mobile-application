@@ -10,6 +10,8 @@ import {AboutUsPage} from './about-us.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
 import {ServicePageModule} from '../services/services.module';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
+import {ModalPopupModule} from '../../shared-components/modal-popup/modal-popup.module';
+import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
 @NgModule({
     imports: [
         CommonModule,
@@ -18,8 +20,10 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
         AboutUsPageRoutingModule,
         HeaderModule,
         ServicePageModule,
-        SlickCarouselModule
+        SlickCarouselModule,
+        ModalPopupModule
     ],
+    entryComponents: [ModalPopupPage],
     declarations: [AboutUsPage]
 })
 export class AboutUsPageModule {

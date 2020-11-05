@@ -205,8 +205,15 @@
         padding-bottom: 5px;
       }
 
+
       .heading-text {
+        display: flex;
+        justify-content: space-between;
         font-size: 20px;
+        align-items: center;
+        .know-more {
+          font-size: 14px;
+        }
       }
 
       .content-div {
@@ -252,7 +259,11 @@
     }
 
     .product-container {
-
+      .no-data {
+        text-align: center;
+        padding: 30px 0;
+        color: #666;
+      }
     }
   }
 
@@ -354,4 +365,8 @@
 
 .custom-slide {
   margin: 0 5px;
+}
+
+.know-more {
+  color: #666;
 }

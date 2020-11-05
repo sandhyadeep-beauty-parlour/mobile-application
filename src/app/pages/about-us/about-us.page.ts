@@ -1,6 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {IonSlides} from '@ionic/angular';
+import {IonSlides, ModalController} from '@ionic/angular';
 import $ from 'jquery';
+import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -41,7 +43,7 @@ export class AboutUsPage implements OnInit {
     initialSlide: 0,
     slidesPerView: 3
   };
-  constructor() {
+  constructor(public modalController: ModalController, private router: Router) {
     //Item object for Nature
     this.sliderOne =
         {
@@ -72,13 +74,19 @@ export class AboutUsPage implements OnInit {
           isEndSlide: false,
           slidesItems: [
             {
-              url: 'assets/sandhyadeep1.png'
+              url: 'assets/deepaa1.jpg'
             },
             {
-              url: 'assets/sandhyadeep2.png'
+              url: 'assets/deepaa2.jpg'
             },
             {
-              url: 'assets/sandhyadeep4.png'
+              url: 'assets/deepaa3.jpg'
+            },
+            {
+              url: 'assets/deepaa4.jpg'
+            },
+            {
+              url: 'assets/deepaa6.jpg'
             }
           ]
         };
@@ -108,13 +116,11 @@ export class AboutUsPage implements OnInit {
   }
 
   slides = [
-    {img: "http://placehold.it/350x150/000000"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"}
+    {img: "assets/work1.jpg"},
+    {img: "assets/work2.jpg"},
+    {img: "assets/work3.jpg"},
+    {img: "assets/work6.jpg"},
+    {img: "assets/work7.jpg"}
   ];
   slideConfig = {
     "slidesToShow": 3,
@@ -124,6 +130,26 @@ export class AboutUsPage implements OnInit {
     "autoplay": true,
     "autoplaySpeed": 1500
   };
+
+  dataReturned: any;
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: ModalPopupPage,
+      componentProps: {
+        "paramID": 123,
+        "paramTitle": "Test Title"
+      }
+    });
+
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null) {
+        this.dataReturned = dataReturned.data;
+        //alert('Modal Sent Data :'+ dataReturned);
+      }
+    });
+
+    return await modal.present();
+  }
 
   onSelectMenu(key) {
     this.selectedMenu = key;
@@ -195,6 +221,10 @@ export class AboutUsPage implements OnInit {
 
   beforeChange(e) {
     console.log('beforeChange');
+  }
+
+  onSeeAllPortfolios() {
+    this.router.navigate(['home/portfolio']);
   }
 
 }

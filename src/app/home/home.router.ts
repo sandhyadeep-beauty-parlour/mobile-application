@@ -22,6 +22,9 @@ const routes: Routes = [
             {
                 path: 'services',
                 loadChildren: () => import('../pages/services/services.module').then((e) => e.ServicePageModule)
+            },{
+                path: 'portfolio',
+                loadChildren: () => import('../pages/portfolio/portfolio.module').then((e) => e.PortfolioModule)
             }, {
                 path: 'notifications',
                 loadChildren: () => import('../pages/notifications/notifications.module').then((e) => e.NotificationsPageModule)

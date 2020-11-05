@@ -1,0 +1,85 @@
+.top-adjust {
+  top: 65px;
+}
+.portfolio-container {
+  display: flex;
+  margin-bottom: 65px;
+
+}
+.photos-container {
+  .photo {
+    position: relative;
+    &.left {
+      margin: 10px 5px 5px 15px;
+    }
+    &.right {
+      margin: 10px 15px 5px 5px;
+    }
+    .single-photo {
+      position: relative;
+    }
+    .photo-likes-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      .photo-likes {
+        color: #666;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .like-icon {
+          i.fa.fa-heart {
+            color: red;
+          }
+      }
+    }
+  }
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 15px 5px;
+  .heading-text {
+    font-size: 24px;
+  }
+}
+
+.icon {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  top: 12%;
+  left: 35%;
+  opacity: 0;
+  fill: red;
+  &.like {
+    animation: 2s like-heart-animation ease-in-out forwards;
+  }
+}
+
+@keyframes like-heart-animation {
+  0%,
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  15% {
+    opacity: 0.9;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  30% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  45%,
+  80% {
+    opacity: 0.9;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
