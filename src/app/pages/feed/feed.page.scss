@@ -1,4 +1,6 @@
-
+.top-adjust {
+  top: 65px;
+}
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -127,6 +129,10 @@
   padding: 0 15px;
 }
 
+.feed-container {
+  margin-bottom: 65px;
+}
+
 .slide_container .slider{
   display: inline-block;
   height: 95%;
@@ -240,13 +246,13 @@
       border: 2px solid #666;
       padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block;
       &.image-1 {
-        background-image: url('../../../assets/haircut.jpeg');
+        background-image: url('../../../assets/vector-haircut.jpg');
       }
       &.image-2 {
-        background-image: url('../../../assets/thredding.jpeg');
+        background-image: url('../../../assets/thredding2.jpeg');
       }
       &.image-3 {
-        background-image: url('../../../assets/s3.jpg');
+        background-image: url('../../../assets/vector_facial.jpg');
       }
       &.image-4 {
         background-image: url('../../../assets/manicure.jpeg');

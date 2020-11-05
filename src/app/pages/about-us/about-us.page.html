@@ -1,9 +1,8 @@
-<sandhyadeep-header></sandhyadeep-header>
-<ion-content>
+<ion-content class="top-adjust">
     <div class="about-us-container">
         <div class="image-container">
             <div class="about-us-image">
-                <ion-slides class="feed-sliders" pager="true" [options]="slideOpts">
+                <ion-slides class="feed-sliders height-350" pager="true" [options]="slideOpts">
                     <ion-slide class="feed-images feed-slider feed-slider-one">
 
                     </ion-slide>
@@ -32,36 +31,41 @@
         </div>
         <div class="description-container">
             <div class="description-toggle-menus">
-                <div class="toggle-menu-background about-us" [class.active] = show>
-                    <div class="toggle-menu" [class.active] = show>About Us</div>
+                <div (click)="onSelectMenu('about_us')" class="toggle-menu-background about-us"
+                     [class.active]="selectedMenu === 'about_us'">
+                    <div class="toggle-menu" [class.active]="selectedMenu === 'about_us'">About Us</div>
                 </div>
-                <div class="toggle-menu-background services">
-                    <div class="toggle-menu">Services</div>
+                <div (click)="onSelectMenu('services')" class="toggle-menu-background services"
+                     [class.active]="selectedMenu === 'services'">
+                    <div class="toggle-menu" [class.active]="selectedMenu === 'services'">Services</div>
                 </div>
-                <div class="toggle-menu-background owner">
-                    <div class="toggle-menu">Our Owner</div>
+                <div (click)="onSelectMenu('owner')" class="toggle-menu-background owner"
+                     [class.active]="selectedMenu === 'owner'">
+                    <div class="toggle-menu" [class.active]="selectedMenu === 'owner'">Our Owner</div>
                 </div>
-                <div class="toggle-menu-background product">
-                    <div class="toggle-menu">Products</div>
+                <div (click)="onSelectMenu('products')" class="toggle-menu-background product"
+                     [class.active]="selectedMenu === 'products'">
+                    <div class="toggle-menu" [class.active]="selectedMenu === 'products'">Products</div>
                 </div>
             </div>
             <div class="description-data-container">
-                <div class="about-us-page-container">
+                <div *ngIf="selectedMenu === 'about_us'" class="about-us-page-container">
                     <div class="tab-container border-bottom">
                         <div class="heading-text">
                             <b>Description</b>
                         </div>
                         <div class="content-div">
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful conte
+                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+                            demonstrate the visual form of a document or a typeface without relying on meaningful conte
                         </div>
                     </div>
                     <div class="tab-container">
                         <div class="heading-text">
-                            <b>Work Timings</b>
+                            <b>Information</b>
                         </div>
                         <div class="timing">
                             <div>Sunday - Friday</div>
-                            <div>10:00 PM - 07:00 PM</div>
+                            <div>10:00 AM - 07:00 PM</div>
                         </div>
                     </div>
                     <div class="tab-container">
@@ -69,7 +73,7 @@
                             5595, Near Samarth Vidya Mandir, Anandi Bazar, Ahmednagar, Maharashtra, 414001
                         </div>
                         <div class="phone-number-div">
-                            <div>+91-9403733265</div>
+                            <div>+91-9422086335</div>
                             <div>
                                 <div class="phone-icon">
                                     <i class="fa fa-phone"></i>
@@ -78,12 +82,209 @@
                         </div>
                     </div>
                 </div>
-                <div class="services-container">
+                <div *ngIf="selectedMenu === 'services'" class="services-container">
+                    <div class="page-container">
+                        <div class="page-heading">
+                            <div class="heading-text">
+                                <b>Services</b>
+                            </div>
+                        </div>
+                        <div class="item-list">
+                            <div class="item-container">
+                                <div (click)="show = !show" class="main-item-name-container">
+                                    <div class="main-item-name">Name</div>
+                                    <div class="main-item-arrow">
+                                        <i class="right-icon fa fa-angle-right" [class.down]="show"></i>
+                                    </div>
+                                </div>
+                                <div class="sub-item-list" [class.opened]="show">
+                                    <div class="sub-item-container">
+                                        <div class="sub-item-name">
+                                            <div class="name">Sub Item Name</div>
+                                            <div class="time">15 Minutes</div>
+                                        </div>
+                                        <div class="sub-item-price">
+                                            <div class="color-666">Price:</div>
+                                            30$
+                                        </div>
+                                        <div class="sub-item-checkbox">
+                                            <ion-checkbox color="primary"></ion-checkbox>
+                                        </div>
+                                    </div>
+                                    <div class="sub-item-container">
+                                        <div class="sub-item-name">
+                                            <div class="name">Sub Item Name</div>
+                                            <div class="time">15 Minutes</div>
+                                        </div>
+                                        <div class="sub-item-price">
+                                            <div class="color-666">Price:</div>
+                                            30$
+                                        </div>
+                                        <div class="sub-item-checkbox">
+                                            <ion-checkbox color="primary"></ion-checkbox>
+                                        </div>
+                                    </div>
+                                    <div class="sub-item-container">
+                                        <div class="sub-item-name">
+                                            <div class="name">Sub Item Name</div>
+                                            <div class="time">15 Minutes</div>
+                                        </div>
+                                        <div class="sub-item-price">
+                                            <div class="color-666">Price:</div>
+                                            30$
+                                        </div>
+                                        <div class="sub-item-checkbox">
+                                            <ion-checkbox color="primary"></ion-checkbox>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-container">
+                                <div (click)="show1 = !show1" class="main-item-name-container">
+                                    <div class="main-item-name">Name</div>
+                                    <div class="main-item-arrow">
+                                        <i class="right-icon fa fa-angle-right" [class.down]="show1"></i>
+                                    </div>
+                                </div>
+                                <div class="sub-item-list" [class.opened]="show1">
+                                    <div class="sub-item-container">
+                                        <div class="sub-item-name">
+                                            <div class="name">Sub Item Name</div>
+                                            <div class="time">15 Minutes</div>
+                                        </div>
+                                        <div class="sub-item-price">
+                                            <div class="color-666">Price:</div>
+                                            30$
+                                        </div>
+                                        <div class="sub-item-checkbox">
+                                            <ion-checkbox color="primary"></ion-checkbox>
+                                        </div>
+                                    </div>
+                                    <div class="sub-item-container">
+                                        <div class="sub-item-name">
+                                            <div class="name">Sub Item Name</div>
+                                            <div class="time">15 Minutes</div>
+                                        </div>
+                                        <div class="sub-item-price">
+                                            <div class="color-666">Price:</div>
+                                            30$
+                                        </div>
+                                        <div class="sub-item-checkbox">
+                                            <ion-checkbox color="primary"></ion-checkbox>
+                                        </div>
+                                    </div>
+                                    <div class="sub-item-container">
+                                        <div class="sub-item-name">
+                                            <div class="name">Sub Item Name</div>
+                                            <div class="time">15 Minutes</div>
+                                        </div>
+                                        <div class="sub-item-price">
+                                            <div class="color-666">Price:</div>
+                                            30$
+                                        </div>
+                                        <div class="sub-item-checkbox">
+                                            <ion-checkbox color="primary"></ion-checkbox>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ion-footer class="ion-no-border">
+                            <ion-toolbar>
+                                <div class="appointment-footer">
+                                    <div class="total-div-container">
+                                        <div class="total-div">
+                                            <div>Total</div>
+                                            <div class="total-div-price">3 Services</div>
+                                        </div>
+                                        <div>
+                                            $354
+                                        </div>
+                                    </div>
+                                    <div class="default-button">
+                                        <button (click)="onBookAppointment()"> Book Appointment</button>
+                                    </div>
+                                </div>
+                            </ion-toolbar>
+                        </ion-footer>
+                    </div>
+                </div>
+                <div *ngIf="selectedMenu === 'owner'" class="owner-container">
+                    <div class="ion-image-slides border-bottom">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="1">
+                                <span class="slider-nav arrow-prev" (click)="slidePrev(sliderTwo,slideWithNav2)">
+                                  <div class="prev-icon-custom custon-nav" [class.disabled]="sliderTwo.isBeginningSlide"></div>
+                                </span>
+                                </ion-col>
+                                <ion-col size="10">
+                                    <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2
+                                                (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+                                        <ion-slide *ngFor="let slide of sliderTwo.slidesItems">
+                                            <img src={{slide.url}}>
+                                        </ion-slide>
+                                    </ion-slides>
+                                </ion-col>
+                                <ion-col size="1">
+                                <span class="slider-nav arrow-next" (click)="slideNext(sliderTwo,slideWithNav2)">
+                                  <div class="next-icon-custom custon-nav" [class.disabled]="sliderTwo.isEndSlide"></div>
+                                </span>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+
+                    <div class="tab-container border-bottom">
+                        <div class="heading-text">
+                            <b>Description</b>
+                        </div>
+                        <div class="content-div">
+                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+                            demonstrate the visual form of a document or a typeface without relying on meaningful conte
+                        </div>
+                    </div>
+                    <div class="tab-container border-bottom">
+                        <div class="heading-text">
+                            <b>Achievements</b>
+                        </div>
+                        <div class="content-div">
+                            <ul>
+                                <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>
+                                <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>
+                                <li>Master Diploma in Makeup Artistry · Singapore</li>
+                                <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>
+                                <li>British Association of Beauty Therapy & Cosmetology, London.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-container">
+                        <div class="heading-text">
+                            <b>Awards</b>
+                        </div>
+                        <div class="content-div">
+                            <ngx-slick-carousel class="carousel"
+                                                #slickModal="slick-carousel"
+                                                [config]="slideConfig"
+                                                (init)="slickInit($event)"
+                                                (breakpoint)="breakpoint($event)"
+                                                (afterChange)="afterChange($event)"
+                                                (beforeChange)="beforeChange($event)">
+                                <div ngxSlickItem *ngFor="let slide of slides" class="slide custom-slide">
+                                    <img src="{{ slide.img }}" alt="" width="100%">
+                                </div>
+                            </ngx-slick-carousel>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="selectedMenu === 'products'" class="product-container">
 
                 </div>
-                <div class="owner-container"></div>
-                <div class="product-container"></div>
             </div>
         </div>
     </div>
 </ion-content>
+
+<script>
+
+</script>

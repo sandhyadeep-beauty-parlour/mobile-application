@@ -1,3 +1,6 @@
+.top-adjust {
+  top: 65px;
+}
 
 .page-container {
   padding: 0 15px;
@@ -23,7 +26,6 @@
       border-bottom: 1px solid lightgray;
       .main-item-name {
         font-size: 18px;
-        font-weight: bold;
       }
       .main-item-arrow {
         color: #666;

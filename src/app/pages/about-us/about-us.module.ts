@@ -8,14 +8,17 @@ import {AboutUsPageRoutingModule} from './about-us-routing.module';
 
 import {AboutUsPage} from './about-us.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
-
+import {ServicePageModule} from '../services/services.module';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
         AboutUsPageRoutingModule,
-        HeaderModule
+        HeaderModule,
+        ServicePageModule,
+        SlickCarouselModule
     ],
     declarations: [AboutUsPage]
 })

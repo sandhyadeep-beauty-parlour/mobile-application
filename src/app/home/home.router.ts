@@ -21,7 +21,7 @@ const routes: Routes = [
             },
             {
                 path: 'services',
-                loadChildren: () => import('../pages/services/services.module').then((e) => e.MessagesPageModule)
+                loadChildren: () => import('../pages/services/services.module').then((e) => e.ServicePageModule)
             }, {
                 path: 'notifications',
                 loadChildren: () => import('../pages/notifications/notifications.module').then((e) => e.NotificationsPageModule)

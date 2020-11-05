@@ -37,9 +37,19 @@
               },
               {
                 "input": "src/global.scss"
+              },
+              {
+                "input": "node_modules/slick-carousel/slick/slick-theme.scss"
+              },
+              {
+                "input": "node_modules/slick-carousel/slick/slick.scss"
               }
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           },
           "configurations": {
             "production": {

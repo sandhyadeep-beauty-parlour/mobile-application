@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MessagesPageRoutingModule } from './services-routing.module';
+import { ServicePageRoutingModule } from './services-routing.module';
 
 import { ServicesPage } from './services.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
@@ -14,9 +14,12 @@ import {HeaderModule} from '../../shared-components/header-component/header-comp
     CommonModule,
     FormsModule,
     IonicModule,
-    MessagesPageRoutingModule,
-      HeaderModule
+    ServicePageRoutingModule,
+    HeaderModule
+  ],
+  exports: [
+    ServicesPage
   ],
   declarations: [ServicesPage]
 })
-export class MessagesPageModule {}
+export class ServicePageModule {}
