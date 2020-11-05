@@ -2,6 +2,9 @@
 
 <ion-content class="top-adjust">
     <div class="page-heading">
+        <div (click)="backClicked()" class="back-navigator">
+            <i class="fa fa-angle-left"></i>
+        </div>
         <div class="heading-text">
             <b>Portfolio</b>
         </div>
@@ -9,7 +12,7 @@
     <div class="portfolio-container">
         <div class="photos-container">
             <div class="photo right" *ngFor="let image of imagesData; let index = index">
-                <div (tap)="onLike(imagesData, index)" class="single-photo">
+                <div (click)="onLike(imagesData, index)" class="single-photo">
                     <svg class="icon icon-heart" [class.like]="image.check">
                         <use xlink:href="#icon-heart"></use>
                     </svg>
@@ -26,7 +29,7 @@
         </div>
         <div class="photos-container">
             <div class="photo right" *ngFor="let image of imagesData1; let index = index">
-                <div (tap)="onLike(imagesData1, index)" class="single-photo">
+                <div (click)="onLike(imagesData1, index)" class="single-photo">
                     <svg class="icon icon-heart" [class.like]="image.check">
                         <use xlink:href="#icon-heart"></use>
                     </svg>

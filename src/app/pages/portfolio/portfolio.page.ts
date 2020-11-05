@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'portfolio',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioPage implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
   imagesData = [
     {
       url: 'assets/work14.jpg',
@@ -97,6 +98,10 @@ export class PortfolioPage implements OnInit {
       list[index].likes = parseInt(list[index].likes, 10) - 1;
       list[index].isLiked = false;
     }
+  }
+
+  backClicked() {
+    this.location.back();
   }
 
 }

@@ -38,8 +38,13 @@
 }
 
 .page-heading {
+  .back-navigator {
+    font-size: 30px;
+    margin-right: 20px;
+    color: #666;
+  }
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   margin: 18px 15px 5px;
   .heading-text {

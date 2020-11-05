@@ -3,6 +3,7 @@ import {IonSlides, ModalController} from '@ionic/angular';
 import $ from 'jquery';
 import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
 import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-about-us',
@@ -43,7 +44,7 @@ export class AboutUsPage implements OnInit {
     initialSlide: 0,
     slidesPerView: 3
   };
-  constructor(public modalController: ModalController, private router: Router) {
+  constructor(public modalController: ModalController, private router: Router, private location: Location) {
     //Item object for Nature
     this.sliderOne =
         {
@@ -227,4 +228,7 @@ export class AboutUsPage implements OnInit {
     this.router.navigate(['home/portfolio']);
   }
 
+  backClicked() {
+    this.location.back();
+  }
 }
