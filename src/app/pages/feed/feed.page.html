@@ -1,4 +1,5 @@
-<ion-content class="top-adjust">
+<sandhyadeep-header class="z-index-99"></sandhyadeep-header>
+<ion-content>
     <ion-searchbar color="light" class="search-bar" placeholder="Search"></ion-searchbar>
     <ion-slides class="feed-sliders" pager="true" [options]="slideOpts">
         <ion-slide class="feed-images feed-slider feed-slider-one">
@@ -11,7 +12,7 @@
 
         </ion-slide>
     </ion-slides>
-    <div class="menu-container feed-container">
+    <div class="menu-container">
 <!--        <div class="feed-heading">-->
 <!--            <h2><b>Services</b></h2>-->
 <!--        </div>-->
@@ -65,13 +66,40 @@
             <div class="heading-text">
                 <b>Packages</b>
             </div>
-            <div class="know-more">See All <i class="fa fa-angle-right"></i></div>
+            <div [routerLink]="['/home/packages']" class="know-more">See All <i class="fa fa-angle-right"></i></div>
         </div>
         <div class="height-200px slide_container">
             <div class="slider p1"></div>
             <div class="slider p2"></div>
             <div class="slider p3"></div>
             <div class="slider p4"></div>
+        </div>
+
+        <div class="feed-heading">
+            <div class="heading-text">
+                <b>Products</b>
+            </div>
+            <div [routerLink]="['/home/products']" class="know-more">See All <i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="products_container">
+            <div *ngFor="let product of productImages" class="image-slider-container">
+                <div class="slider-image">
+                    <img src="{{product.url}}" alt="">
+                </div>
+                <div class="slider-text">
+                    <div class="product-name">
+                        {{product.name}}
+                    </div>
+                    <div class="product-price-details">
+                        <div class="price">
+                            {{product.price}}
+                        </div>
+                        <div class="add-item">
+                            Add
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="feed-heading">
             <div class="heading-text">

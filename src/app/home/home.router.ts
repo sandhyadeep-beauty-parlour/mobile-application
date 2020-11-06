@@ -34,6 +34,12 @@ const routes: Routes = [
             }, {
                 path: 'settings',
                 loadChildren: () => import('../pages/settings/settings.module').then((e) => e.SettingsPageModule)
+            }, {
+                path: 'packages',
+                loadChildren: () => import('../pages/packages/packages.module').then((e) => e.PackagesModule)
+            }, {
+                path: 'products',
+                loadChildren: () => import('../pages/products/products.module').then((e) => e.ProductsModule)
             }
         ]
     }];

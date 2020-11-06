@@ -4,9 +4,9 @@ import {FormsModule} from '@angular/forms';
 
 import {IonicModule} from '@ionic/angular';
 
-import {ServicePageRoutingModule} from './services-routing.module';
+import {PackagesRoutingModule} from './packages-routing.module';
 
-import {ServicesPage} from './services.page';
+import {PackagesPage} from './packages.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
 import {SearchHeaderComponentModule} from '../../shared-components/search-header-component/search-header-component.module';
 
@@ -15,14 +15,11 @@ import {SearchHeaderComponentModule} from '../../shared-components/search-header
         CommonModule,
         FormsModule,
         IonicModule,
-        ServicePageRoutingModule,
+        PackagesRoutingModule,
         HeaderModule,
         SearchHeaderComponentModule
     ],
-    exports: [
-        ServicesPage
-    ],
-    declarations: [ServicesPage]
+    declarations: [PackagesPage]
 })
-export class ServicePageModule {
+export class PackagesModule {
 }

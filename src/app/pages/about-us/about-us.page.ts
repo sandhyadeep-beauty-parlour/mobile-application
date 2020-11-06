@@ -38,7 +38,9 @@ export class AboutUsPage implements OnInit {
     slidesPerView: 2,
     loop: true,
     centeredSlides: true,
-    spaceBetween: 20
+    spaceBetween: 20,
+    longSwipes: true,
+    autoplay: true,
   };
   slideOptsThree = {
     initialSlide: 0,

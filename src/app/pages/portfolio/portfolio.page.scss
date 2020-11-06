@@ -1,10 +1,5 @@
-.top-adjust {
-  top: 65px;
-}
 .portfolio-container {
   display: flex;
-  margin-bottom: 65px;
-
 }
 .photos-container {
   .photo {
@@ -46,7 +41,7 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  margin: 18px 15px 5px;
+  margin: 10px 15px 5px;
   .heading-text {
     font-size: 24px;
   }

@@ -1,13 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-
 import {IonicModule} from '@ionic/angular';
-
-import {ServicePageRoutingModule} from './services-routing.module';
-
-import {ServicesPage} from './services.page';
-import {HeaderModule} from '../../shared-components/header-component/header-component.module';
+import {ProductsRoutingModule} from './products-routing.module';
+import {ProductsPage} from './products.page';
 import {SearchHeaderComponentModule} from '../../shared-components/search-header-component/search-header-component.module';
 
 @NgModule({
@@ -15,14 +11,10 @@ import {SearchHeaderComponentModule} from '../../shared-components/search-header
         CommonModule,
         FormsModule,
         IonicModule,
-        ServicePageRoutingModule,
-        HeaderModule,
+        ProductsRoutingModule,
         SearchHeaderComponentModule
     ],
-    exports: [
-        ServicesPage
-    ],
-    declarations: [ServicesPage]
+    declarations: [ProductsPage]
 })
-export class ServicePageModule {
+export class ProductsModule {
 }

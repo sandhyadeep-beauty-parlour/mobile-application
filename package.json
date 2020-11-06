@@ -33,7 +33,7 @@
     "jquery": "^3.5.1",
     "lightbox2": "^2.11.3",
     "ngx-slick-carousel": "^0.5.1",
-    "rxjs": "~6.5.1",
+    "rxjs": "^6.6.3",
     "screenfull": "^3.3.0",
     "slick-carousel": "^1.8.1",
     "tslib": "^1.9.0",

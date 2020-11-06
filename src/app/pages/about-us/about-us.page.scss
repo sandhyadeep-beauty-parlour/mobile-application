@@ -93,7 +93,6 @@
 
 .about-us-container {
   padding: 0 15px;
-  margin-bottom: 65px;
 }
 
 .image-container {
@@ -159,7 +158,7 @@
 }
 
 .description-container {
-  padding: 15px 0;
+  padding: 15px 0 0;
 
   .description-toggle-menus {
     display: flex;
@@ -197,7 +196,7 @@
   }
 
   .description-data-container {
-    padding: 15px 0;
+    padding: 15px 0 0;
 
     .about-us-page-container, .owner-container {
       .tab-container {
@@ -281,7 +280,7 @@
 .appointment-footer {
   display: flex;
   flex-direction: column;
-  padding: 10px 15px;
+  padding: 10px 15px 0;
 
   .total-div-container {
     display: flex;
@@ -359,6 +358,14 @@
 .ion-image-slides {
   margin-bottom: 10px;
   padding: 5px 0;
+  .scroll-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 0 5px;
+    color: #666;
+  }
 }
 // Slider Style STOP
 //

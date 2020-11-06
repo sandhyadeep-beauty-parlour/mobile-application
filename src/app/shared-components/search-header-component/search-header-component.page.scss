@@ -1,0 +1,28 @@
+.header-container {
+  padding-bottom: 3px;
+  background: linear-gradient(305deg, #cc2b5e 2%, #753a88 63%);
+  ion-header {
+    background: white;
+  }
+  .search-header-container {
+    display: flex; align-items: center; justify-content: space-between;
+    .header-back {
+      padding: 15px; font-size: 30px; color: #666;
+    }
+    .header-search {
+      display: flex; flex-basis: 80%;
+      .search-bar {
+
+      }
+    }
+    .icons-list {
+      display: flex; align-items: center; justify-content: space-between;
+      .icon-container {
+        margin: 0 15px;
+        i {
+          font-size: 20px; color: #cc2b5e
+        }
+      }
+    }
+  }
+}

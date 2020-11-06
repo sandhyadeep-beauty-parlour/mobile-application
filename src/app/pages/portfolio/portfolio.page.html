@@ -1,6 +1,5 @@
-
-
-<ion-content class="top-adjust">
+<sandhyadeep-header class="z-index-99"></sandhyadeep-header>
+<ion-content>
     <div class="page-heading">
         <div (click)="backClicked()" class="back-navigator">
             <i class="fa fa-angle-left"></i>
@@ -11,7 +10,7 @@
     </div>
     <div class="portfolio-container">
         <div class="photos-container">
-            <div class="photo right" *ngFor="let image of imagesData; let index = index">
+            <div class="photo left" *ngFor="let image of imagesData; let index = index">
                 <div (click)="onLike(imagesData, index)" class="single-photo">
                     <svg class="icon icon-heart" [class.like]="image.check">
                         <use xlink:href="#icon-heart"></use>
