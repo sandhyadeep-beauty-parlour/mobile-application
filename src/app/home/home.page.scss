@@ -5,3 +5,26 @@
 .margin-top-25 {
   top: 25px;
 }
+
+.width-30 {
+  width: 30px;
+}
+
+.footer-container {
+  .footer-tab {
+    padding-top: 3px;
+    background: linear-gradient(305deg, #cc2b5e 2%, #753a88 63%);
+  }
+  ion-tab-bar {
+    ion-tab-button {
+      color: #666;
+      &.tab-selected {
+        color: #753a88;
+      }
+    }
+    padding: 8px 0;
+    ion-label {
+      font-weight: bold;
+    }
+  }
+}

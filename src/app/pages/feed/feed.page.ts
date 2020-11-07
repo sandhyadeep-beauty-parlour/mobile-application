@@ -12,6 +12,33 @@ export class FeedPage implements OnInit {
     speed: 400,
     autoplay: true
   };
+  brandsList = [
+    {
+      name: 'Matrix',
+      url: 'assets/matrix.png'
+    },
+    {
+      name: 'Lorial',
+      url: 'assets/lorial.png'
+    },
+    {
+      name: 'O3',
+      url: 'assets/03.png'
+    },
+    {
+      name: 'Shehnaj',
+      url: 'assets/shahnaz-husain.gif'
+    },
+    {
+      name: 'MAC',
+      url: 'assets/mac.jpg'
+    },
+    {
+      name: 'olay',
+      url: 'assets/olay.png'
+    }
+  ];
+
   productImages = [
     {
       name: 'Product 1',

@@ -1,6 +1,6 @@
 <sandhyadeep-header class="z-index-99"></sandhyadeep-header>
 <ion-content>
-    <ion-searchbar color="light" class="search-bar" placeholder="Search"></ion-searchbar>
+<!--    <ion-searchbar color="light" class="search-bar" placeholder="Search"></ion-searchbar>-->
     <ion-slides class="feed-sliders" pager="true" [options]="slideOpts">
         <ion-slide class="feed-images feed-slider feed-slider-one">
 
@@ -105,6 +105,41 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="safety-measures">
+            <div class="margin-bottom-10">
+                Best-in-class safety measures
+            </div>
+            <div class="measures-container margin-bottom-10">
+                <div class="measure">
+                    <div class="measure-image"><img src="assets/mask.png" alt=""></div>
+                    <div class="measure-text">Usage of mask & gloves</div>
+                </div>
+                <div class="measure">
+                    <div class="measure-image"><img src="assets/thermometer.png" alt=""></div>
+                    <div class="measure-text">Temperature Checks</div>
+                </div>
+                <div class="measure">
+                    <div class="measure-image"><img src="assets/liquid-soap.png" alt=""></div>
+                    <div class="measure-text">Sanitizations of tools & area</div>
+                </div>
+                <div class="measure">
+                    <div class="measure-image"><img src="assets/setu.png" alt=""></div>
+                    <div class="measure-text">Arogya Setu to ensure Safety</div>
+                </div>
+            </div>
+        </div>
+        <div class="safety-measures">
+            <div class="margin-bottom-10">
+                We use best brands in 1-time use
+            </div>
+            <div style="display: flex; flex-wrap: wrap">
+                <div style="flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px" *ngFor="let brand of brandsList">
+                    <img style="width: 70px" src={{brand.url}} alt="">
+                </div>
+            </div>
+
         </div>
         <div class="feed-heading">
             <div class="heading-text">

@@ -1,25 +1,28 @@
 <router-outlet></router-outlet>
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="feed">
-      <ion-icon name="receipt-outline"></ion-icon>
-      <ion-label>Feed</ion-label>
-    </ion-tab-button>
+<div class="footer-container">
+  <ion-tabs>
+    <div class="footer-tab">
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="feed">
+          <img class="width-30" src="assets/home.png" alt="">
+          <ion-label>Feed</ion-label>
+        </ion-tab-button>
 
-    <ion-tab-button tab="messages">
-      <ion-icon name="mail-outline"></ion-icon>
-      <ion-label>Messages</ion-label>
-    </ion-tab-button>
+        <ion-tab-button tab="bookings">
+          <img class="width-30" src="assets/checklist.png" alt="">
+          <ion-label>My Bookings</ion-label>
+        </ion-tab-button>
 
-    <ion-tab-button tab="notifications">
-      <ion-icon name="notifications"></ion-icon>
-      <ion-label>Notifications</ion-label>
-    </ion-tab-button>
+        <ion-tab-button tab="portfolio">
+          <img class="width-30" src="assets/makeup_icon.png" alt="">
+          <ion-label>Portfolio</ion-label>
+        </ion-tab-button>
 
-    <ion-tab-button tab="settings">
-      <ion-icon name="cog"></ion-icon>
-      <ion-label>Settings</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-
-</ion-tabs>
+        <ion-tab-button tab="settings">
+          <img class="width-30" src="assets/businesswoman.png" alt="">
+          <ion-label>Profile</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </div>
+  </ion-tabs>
+</div>

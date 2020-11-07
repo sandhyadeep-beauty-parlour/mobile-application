@@ -40,6 +40,9 @@ const routes: Routes = [
             }, {
                 path: 'products',
                 loadChildren: () => import('../pages/products/products.module').then((e) => e.ProductsModule)
+            }, {
+                path: 'bookings',
+                loadChildren: () => import('../pages/bookings/bookings.module').then((e) => e.BookingsModule)
             }
         ]
     }];

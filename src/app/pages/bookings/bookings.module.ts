@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SettingsPageRoutingModule } from './settings-routing.module';
+import { BookingsRoutingModule } from './bookings-routing.module';
 
-import { SettingsPage } from './settings.page';
+import { BookingsPage } from './bookings.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {HeaderModule} from '../../shared-components/header-component/header-comp
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingsPageRoutingModule,
+    BookingsRoutingModule,
       HeaderModule
   ],
-  declarations: [SettingsPage]
+  declarations: [BookingsPage]
 })
-export class SettingsPageModule {}
+export class BookingsModule {}

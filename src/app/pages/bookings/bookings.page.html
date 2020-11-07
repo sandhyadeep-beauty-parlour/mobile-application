@@ -1,0 +1,29 @@
+<sandhyadeep-header class="z-index-99"></sandhyadeep-header>
+
+<ion-content>
+  <div class="bookings-container">
+    <div class="wizard-navigation">
+      <ul class="nav nav-pills">
+        <li (click)="onChangeTab('first', 'New Bookings')"  style="width: 50%;">New Bookings</li>
+        <li (click)="onChangeTab('second', 'History')"  style="width: 50%;" class="">History</li>
+      </ul>
+      <div class="moving-tab" [class.first]="tab === 'first'" [class.second]="tab === 'second'" >
+        {{tabName}}
+      </div>
+    </div>
+
+    <div class="bookings-tab">                          
+      <div class="no-active-bookings">
+        <div class="no-bookings-img">
+          <img src="assets/no-bookings.png" alt="">
+        </div>
+        <div class="no-bookings-text">
+          No Active Bookings
+        </div>
+        <div [routerLink]="['/home/services']" class="button-container">
+          <button class="search-button">Search For Bookings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

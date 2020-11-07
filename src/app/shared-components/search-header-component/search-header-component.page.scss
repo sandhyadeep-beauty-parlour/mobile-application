@@ -10,7 +10,7 @@
       padding: 15px; font-size: 30px; color: #666;
     }
     .header-search {
-      display: flex; flex-basis: 80%;
+      display: flex; flex-basis: 70%;
       .search-bar {
 
       }
@@ -18,9 +18,12 @@
     .icons-list {
       display: flex; align-items: center; justify-content: space-between;
       .icon-container {
-        margin: 0 15px;
+        margin: 0 5px;
+        &.cart-icon {
+          margin: 0 15px 0 5px;
+        }
         i {
-          font-size: 20px; color: #cc2b5e
+          font-size: 22px; color: #cc2b5e
         }
       }
     }
