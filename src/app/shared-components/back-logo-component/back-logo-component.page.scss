@@ -1,0 +1,37 @@
+.header-container {
+  padding-bottom: 3px;
+  background: linear-gradient(305deg, #cc2b5e 2%, #753a88 63%);
+  ion-header {
+    background: white;
+  }
+  .search-header-container {
+    display: flex; align-items: center; justify-content: space-between;
+    .header-back {
+      padding: 10px; font-size: 30px; color: #666;
+    }
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      .logo-text {
+        font-size: 25px; font-weight: 700;
+      }
+      .slogan-text {
+        font-size: 10px;
+        padding: 0 5px;
+      }
+    }
+    .icons-list {
+      display: flex; align-items: center; justify-content: space-between;
+      .icon-container {
+        margin: 0 5px;
+        &.cart-icon {
+          margin: 0 15px 0 5px;
+        }
+        i {
+          font-size: 22px; color: #cc2b5e
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<back-logo-header></back-logo-header>
+
+<ion-content>
+    <div class="schedule-appointment-container">
+        <div class="calender-body">
+            <div class="month-name"></div>
+            <div class="days-container">
+                <ng-container *ngFor="let singleDay of daysArray">
+                    <div (click)="onChangeDate(singleDay.showingDate)" class="single-day">
+                        <div [class.bold-text]="selectedDate === singleDay.showingDate" class="day">{{singleDay.showingShortDay}}</div>
+                        <div [class.active]="selectedDate === singleDay.showingDate" class="date">{{singleDay.showingDate}}</div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="slot-container">
+                <div (click)="selectedTimeSlot = slot" *ngFor="let slot of timeSlots" class="time-slot">
+                    <div [class.active]="selectedTimeSlot === slot" class="single-slot">
+                        {{slot}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</ion-content>

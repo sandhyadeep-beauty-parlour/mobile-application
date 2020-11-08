@@ -8,11 +8,12 @@
 .logo-container {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 1.1;
   .logo-text {
     font-size: 25px; font-weight: 700;
   }
   .slogan-text {
-    font-size: 8px;
+    font-size: 10px;
+    padding: 0 5px;
   }
 }

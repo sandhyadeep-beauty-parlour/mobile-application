@@ -1,0 +1,56 @@
+.schedule-appointment-container {
+  .calender-body {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .month-name {
+      padding: 0 0 3px;
+    }
+    .days-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 0 0 10px;
+      border-bottom: 1px solid lightgray;
+      .single-day {
+        flex-basis: (100/8);
+        .date {
+          &.active {
+            padding: 2px 6px;
+            background: #753a88;
+            border-radius: 50%;
+            color: white;
+          }
+          font-weight: bold;
+        }
+      }
+    }
+    .slot-container {
+      padding: 5px 0;
+      display: flex;
+      overflow-x: scroll;
+      border-bottom: 1px solid lightgray;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .time-slot {
+        .single-slot {
+          width: 100px;
+          margin: 5px 7px;
+          padding: 3px;
+          border: 1px solid #753a88;
+          color: #753a88;
+          border-radius: 15px;
+          &.active {
+            background: #753a88;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bold-text {
+  font-weight: bold;
+}

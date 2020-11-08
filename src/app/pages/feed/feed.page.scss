@@ -167,6 +167,15 @@
     .slider-text {
       line-height: 1.3;
       padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .product-name-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
       .product-name {
         font-size: 16px;
         font-weight: bold;
@@ -183,12 +192,8 @@
           .discounted-price {
             color: #666;
             font-size: 14px;
-            margin-left: 8px;
+            margin-left: 5px;
           }
-        }
-
-        .add-item {
-
         }
       }
     }
@@ -198,15 +203,15 @@
 
 .slide_container .slider{
   display: inline-block;
-  height: 95%;
-  border-radius: 10px;
-  border: 1px solid #BFBFBF;
   background-color: white;
   width: 80%;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center center !important;
   margin: 0 10px 5px;
+  img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
   &:first-child {
     margin: 0 10px 5px 0;
   }
@@ -303,42 +308,44 @@
       //background-position: center center !important;
       //background-image: url('../../../assets/s4.jpeg');
       height: 65px;
-      background-size: cover;
-      background-position: center center;
       width: 65px;
       border: 2px solid #666;
       padding: 1px; border-radius: 50%; overflow: hidden; display: inline-block;
-      &.image-1 {
-        background-image: url('../../../assets/vector-haircut.jpg');
+      img {
+        object-fit: cover;
       }
-      &.image-2 {
-        background-image: url('../../../assets/thredding2.jpeg');
-      }
-      &.image-3 {
-        background-image: url('../../../assets/vector_facial.jpg');
-      }
-      &.image-4 {
-        background-image: url('../../../assets/manicure.jpeg');
-      }
-      &.image-5 {
-        background-image: url('../../../assets/products.jpeg');
-      }
-      &.image-6 {
-        background-image: url('../../../assets/upperLips.jpeg');
-      }
-      &.image-7 {
-        background-image: url('../../../assets/bridal.jpeg');
-      }
-      &.image-8 {
-        background-image: url('../../../assets/waxing.jpeg');
-      }
-      &.image-9 {
-        background-image: url('../../../assets/courses.jpeg');
-      }
+      //&.image-1 {
+      //  background-image: url('../../../assets/vector-haircut.jpg');
+      //}
+      //&.image-2 {
+      //  background-image: url('../../../assets/thredding2.jpeg');
+      //}
+      //&.image-3 {
+      //  background-image: url('../../../assets/vector_facial.jpg');
+      //}
+      //&.image-4 {
+      //  background-image: url('../../../assets/manicure.jpeg');
+      //}
+      //&.image-5 {
+      //  background-image: url('../../../assets/products.jpeg');
+      //}
+      //&.image-6 {
+      //  background-image: url('../../../assets/upperLips.jpeg');
+      //}
+      //&.image-7 {
+      //  background-image: url('../../../assets/bridal.jpeg');
+      //}
+      //&.image-8 {
+      //  background-image: url('../../../assets/waxing.jpeg');
+      //}
+      //&.image-9 {
+      //  background-image: url('../../../assets/courses.jpeg');
+      //}
     }
     .menu-text {
       padding-top: 5px;
       font-size: 14px;
+      text-align: center;
     }
   }
 }
@@ -352,6 +359,8 @@
   background-image: url('../../../assets/back-3.jpg');
   background-size: cover;
   background-position: center center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   //background: linear-gradient(193deg, #cc2b5e 2%, #753a88 84%);
   .owner-info-container {
     flex-basis: 35%;
@@ -459,6 +468,43 @@
       .measure-text {
         text-align: center;
       }
+    }
+  }
+}
+
+.add-item {
+  .custom-add-button {
+    display: flex; justify-content: space-between;
+    align-items: center; border: 1px solid #753a88;
+    .add-text {
+      padding: 3px 5px;
+    }
+    i.fa.fa-plus {
+      padding: 5px;
+      background: #753a88;
+      color: white;
+    }
+  }
+  .custom-add-more-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #753a88;
+    .add-text {
+      padding: 3px 5px;
+    }
+    .in-cart-box {
+      padding: 0 6px;
+    }
+    i.fa.fa-plus {
+      padding: 5px;
+      background: #753a88;
+      color: white;
+    }
+    i.fa.fa-minus {
+      padding: 5px;
+      background: #753a88;
+      color: white;
     }
   }
 }

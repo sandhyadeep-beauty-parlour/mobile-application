@@ -24,41 +24,9 @@
 <!--        </div>-->
 
         <div class="quick_menus">
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-1"></div>
-                <div class="menu-text">Hair Cuts</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-2"></div>
-                <div class="menu-text">Eye Brows</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-3"></div>
-                <div class="menu-text">Facials</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-4"></div>
-                <div class="menu-text">Manicure</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-5"></div>
-                <div class="menu-text">Products</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-6"></div>
-                <div class="menu-text">Upper lips</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-7"></div>
-                <div class="menu-text">Bridal Makeup</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-8"></div>
-                <div class="menu-text">Waxing</div>
-            </div>
-            <div (click)="goServices()" class="menu-container">
-                <div class="menu-image image-9"></div>
-                <div class="menu-text">Courses</div>
+            <div *ngFor="let treatment of treatments" (click)="goServices()" class="menu-container">
+                <div class="menu-image"><img src="{{treatment.url}}" alt=""></div>
+                <div class="menu-text">{{treatment.name}}</div>
             </div>
         </div>
 
@@ -68,11 +36,10 @@
             </div>
             <div [routerLink]="['/home/packages']" class="know-more">See All <i class="fa fa-angle-right"></i></div>
         </div>
-        <div class="height-200px slide_container">
-            <div class="slider p1"></div>
-            <div class="slider p2"></div>
-            <div class="slider p3"></div>
-            <div class="slider p4"></div>
+        <div class="slide_container">
+            <div *ngFor="let package of packages" class="slider">
+                <img src="{{package.url}}" alt="">
+            </div>
         </div>
 
         <div class="feed-heading">
@@ -87,20 +54,38 @@
                     <img src="{{product.url}}" alt="">
                 </div>
                 <div class="slider-text">
-                    <div class="product-name">
-                        {{product.name}}
-                    </div>
-                    <div class="product-price-details">
-                        <div class="price-container">
-                            <div class="price">
-                                {{product.price}} ₹
-                            </div>
-                            <div class="discounted-price">
-                                <del> {{product.discountedPrice}} ₹ </del>
+                    <div class="product-name-container">
+                        <div class="product-name">
+                            {{product.name}}
+                        </div>
+                        <div class="product-price-details">
+                            <div class="price-container">
+                                <div class="price">
+                                    {{product.price}} ₹
+                                </div>
+                                <div class="discounted-price">
+                                    <del> {{product.discountedPrice}} ₹ </del>
+                                </div>
                             </div>
                         </div>
-                        <div class="add-item">
-                            Add
+                    </div>
+                    <div class="add-item">
+                        <div *ngIf="!product.inCart" class="custom-add-button">
+                            <div class="add-text">Add</div>
+                            <i (click)="product.addedInCart = product.addedInCart + 1; product.inCart = !product.inCart"
+                               class="fa fa-plus"></i>
+                        </div>
+                        <div *ngIf="product.inCart" class="custom-add-more-button">
+                            <div (click)="product.addedInCart = product.addedInCart - 1;
+                            product.inCart = !(product.addedInCart === 0)">
+                                <i class="fa fa-minus"></i>
+                            </div>
+                            <div class="in-cart-box">
+                                {{product.addedInCart}}
+                            </div>
+                            <div (click)="product.addedInCart = product.addedInCart + 1; ">
+                                <i class="fa fa-plus"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,17 +115,16 @@
                 </div>
             </div>
         </div>
-        <div class="safety-measures">
-            <div class="margin-bottom-10">
-                We use best brands in 1-time use
-            </div>
-            <div style="display: flex; flex-wrap: wrap">
-                <div style="flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px" *ngFor="let brand of brandsList">
-                    <img style="width: 70px" src={{brand.url}} alt="">
-                </div>
-            </div>
-
-        </div>
+<!--        <div class="safety-measures">-->
+<!--            <div class="margin-bottom-10">-->
+<!--                We use best brands in 1-time use-->
+<!--            </div>-->
+<!--            <div style="display: flex; flex-wrap: wrap">-->
+<!--                <div style="flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px" *ngFor="let brand of brandsList">-->
+<!--                    <img style="width: 70px" src={{brand.url}} alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="feed-heading">
             <div class="heading-text">
                 <b>Our Stylist</b>

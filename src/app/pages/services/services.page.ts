@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'services',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   show = true;
   show1 = false;
   ngOnInit() {
   }
 
   onBookAppointment() {
-    console.log('here');
+    this.router.navigate(['home/schedule-appointment']);
   }
 
 }

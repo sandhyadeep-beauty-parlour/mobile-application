@@ -43,6 +43,10 @@ const routes: Routes = [
             }, {
                 path: 'bookings',
                 loadChildren: () => import('../pages/bookings/bookings.module').then((e) => e.BookingsModule)
+            }, {
+                path: 'schedule-appointment',
+                loadChildren: () => import('../pages/schedule-appointment/schedule-appointment.module')
+                    .then((e) => e.ScheduleAppointmentModule)
             }
         ]
     }];
