@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appName: 'Sandhyadeep Beauty Parlour',
+  envName: 'DEV',
+  test: false,
+  baseURL: 'http://dev.upldatrix.tudip.uk:8081/api/',
+  baseURLAdminAPIs: 'http://dev.upldatrix.tudip.uk:8081/api/',
 };
 
 /*

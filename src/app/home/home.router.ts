@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {HomePage} from './home.page';
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
             {
                 path: 'services',
                 loadChildren: () => import('../pages/services/services.module').then((e) => e.ServicePageModule)
-            },{
+            }, {
                 path: 'portfolio',
                 loadChildren: () => import('../pages/portfolio/portfolio.module').then((e) => e.PortfolioModule)
             }, {
@@ -44,6 +44,9 @@ const routes: Routes = [
                 path: 'bookings',
                 loadChildren: () => import('../pages/bookings/bookings.module').then((e) => e.BookingsModule)
             }, {
+                path: 'apply-coupon',
+                loadChildren: () => import('../pages/apply-coupon/apply-coupon.module').then((e) => e.ApplyCouponModule)
+            }, {
                 path: 'schedule-appointment',
                 loadChildren: () => import('../pages/schedule-appointment/schedule-appointment.module')
                     .then((e) => e.ScheduleAppointmentModule)
@@ -55,4 +58,5 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class HomeRouter {}
+export class HomeRouter {
+}

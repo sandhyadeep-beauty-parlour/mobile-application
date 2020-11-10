@@ -1,0 +1,42 @@
+<back-logo-header></back-logo-header>
+<ion-content>
+  <div class="coupon-container">
+    <div class="coupon-search-container">
+      <div class="coupon-search">
+        <div class="coupon-search-input">
+          <input (keyup)="filterCoupons()" [(ngModel)]="addedCoupon" type="text" />
+        </div>
+        <div class="coupon-search-button">
+          APPLY
+        </div>
+      </div>
+    </div>
+    <div class="coupon-cards-container">
+      <div (click)="onSelectCoupon(coupon)" *ngFor="let coupon of couponList" class="coupon-card">
+        <div class="coupon-checkbox">
+          <ion-checkbox [checked]="selectedCoupon === coupon.couponId" color="primary"></ion-checkbox>
+        </div>
+        <div class="coupon-details">
+          <div class="coupon">{{coupon.couponId}}</div>
+          <div class="savings"><b>Save ₹ {{coupon.discount}}</b></div>
+          <div class="savings-details">{{coupon.description}}</div>
+          <div class="savings-details">Expires on: <b>{{coupon.expiresOn}}</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer *ngIf="selectedCoupon" class="ion-no-border">
+  <ion-toolbar>
+    <div class="coupon-footer">
+      <div class="coupon-button-container">
+        <div>Maximum Savings: </div>
+        <div class="coupon-discount">{{selectedCouponDetails?.discount}} ₹</div>
+      </div>
+      <div (click)="onApplyCoupon()" class="default-button width-150">
+        <button>Apply</button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+

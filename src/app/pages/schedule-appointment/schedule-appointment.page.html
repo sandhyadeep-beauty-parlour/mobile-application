@@ -3,7 +3,9 @@
 <ion-content>
     <div class="schedule-appointment-container">
         <div class="calender-body">
-            <div class="month-name"></div>
+            <div class="month-name">
+                {{monthName | titlecase}} {{todayYear}}
+            </div>
             <div class="days-container">
                 <ng-container *ngFor="let singleDay of daysArray">
                     <div (click)="onChangeDate(singleDay.showingDate)" class="single-day">
@@ -19,9 +21,95 @@
                     </div>
                 </div>
             </div>
+            <div class="service-tab-container">
+                <div class="feed-heading">
+                    <div class="heading-text">
+                        <b>Services</b>
+                    </div>
+                </div>
+                <div class="services-container">
+                    <div *ngFor="let service of services" class="service">
+                        <div (click)="onToggleService(service)" class="single-service">
+                            <div class="service-details-container">
+                                <div class="service-checkbox">
+                                    <ion-checkbox [(ngModel)]="service.isChecked" color="primary"></ion-checkbox>
+                                </div>
+                                <div class="main-service-name">{{service.mainServiceName | titlecase}}</div>
+                                <div class="service-name">{{service.serviceName | titlecase}}</div>
+                                <div class="service-duration">{{service.duration}} Minutes</div>
+                            </div>
+                            <div class="service-price-container">
+                                <div class="price-text">Service Price</div>
+                                <div class="service-fees">{{service.price}} ₹</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div [routerLink]="['/home/apply-coupon']" class="coupon-tab-container">
+                <div class="coupon-icon-container">
+                    <img src="assets/coupon.png" alt="">
+                    Apply Coupon
+                </div>
+                <div>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="combo-tab-container">
+<!--                <div class="feed-heading">-->
+<!--                    <div class="heading-text">-->
+<!--                        <b>Combos, You may like </b>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="combo-container">
+                    <div *ngFor="let pack of packages" class="service">
+                        <div (click)="onToggleCombo(pack)" class="single-service">
+                            <div class="service-details-container">
+                                <div class="service-checkbox">
+                                    <ion-checkbox [(ngModel)]="pack.isChecked" color="primary"></ion-checkbox>
+                                </div>
+                                <div class="combo-name">{{pack.name | titlecase}}</div>
+                                <div class="service-container">
+                                    <div class="service-name" *ngFor="let service of pack.servicesList">
+                                        <div style="font-size: 16px">{{service.serviceName}}</div>
+                                        <div>{{service.price}} ₹</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-price-container">
+                                <div class="price-text">Service Price</div>
+                                <div class="price-container">
+                                    <div class="service-fees">{{pack.discountedPrice}} ₹</div>
+                                    <div> <del>{{pack.actualPrice}} ₹</del></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div>
 
         </div>
     </div>
 </ion-content>
+
+
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="appointment-footer">
+            <div class="total-div-container">
+                <div class="total-div">
+                    <div class="total-div-price">{{selectedServicesCount}} Services</div>
+                </div>
+                <div>
+                    {{serviceAmount}} ₹
+                </div>
+            </div>
+            <div (click)="onBookAppointment()" class="default-button">
+                <button > Book Now</button>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-footer>

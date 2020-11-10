@@ -1,0 +1,91 @@
+.coupon-container {
+  background: #d3d3d373;
+  height: 100%;
+}
+.coupon-search-container {
+  padding: 20px 15px;
+  background: white;
+  .coupon-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    .coupon-search-input {
+      height: 100%;
+      flex-basis: 70%;
+      input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        &:focus {
+          border: none;
+        }
+      }
+    }
+    .coupon-search-button {
+      color: #cc2b5e;
+    }
+  }
+}
+
+.coupon-cards-container {
+  .coupon-card {
+    background: white;
+    display: flex;
+    padding: 10px 15px;
+    margin-top: 10px;
+    .coupon-checkbox {
+
+    }
+    .coupon-details {
+      padding: 0 15px;
+      .coupon {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+        border: 2px dashed #cc2b5e;
+        color: #cc2b5e;
+        font-weight: 700;
+      }
+      .savings {
+        padding: 5px 0;
+      }
+      .savings-details {}
+    }
+  }
+}
+
+.default-button {
+  color: white;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+  }
+}
+.coupon-footer {
+  display: flex;
+  justify-content: space-around;
+  .coupon-button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .coupon-discount {
+      font-size: 24px;
+    }
+  }
+}
+
+.width-150 {
+  width: 150px;
+}
