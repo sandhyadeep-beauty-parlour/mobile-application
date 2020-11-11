@@ -56,11 +56,11 @@
                 </div>
             </div>
             <div class="combo-tab-container">
-<!--                <div class="feed-heading">-->
-<!--                    <div class="heading-text">-->
-<!--                        <b>Combos, You may like </b>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="feed-heading">
+                    <div class="heading-text">
+                        <b>People like these combos</b>
+                    </div>
+                </div>
                 <div class="combo-container">
                     <div *ngFor="let pack of packages" class="service">
                         <div (click)="onToggleCombo(pack)" class="single-service">
@@ -68,13 +68,7 @@
                                 <div class="service-checkbox">
                                     <ion-checkbox [(ngModel)]="pack.isChecked" color="primary"></ion-checkbox>
                                 </div>
-                                <div class="combo-name">{{pack.name | titlecase}}</div>
-                                <div class="service-container">
-                                    <div class="service-name" *ngFor="let service of pack.servicesList">
-                                        <div style="font-size: 16px">{{service.serviceName}}</div>
-                                        <div>{{service.price}} ₹</div>
-                                    </div>
-                                </div>
+                                <div class="combo-name">{{pack.comboName | titlecase}}</div>
                             </div>
                             <div class="service-price-container">
                                 <div class="price-text">Service Price</div>
@@ -88,28 +82,56 @@
                 </div>
             </div>
 
-        </div>
-        <div>
-
+            <div class="total-bill-container">
+                <div class="bill-header">
+                    Price Details ({{selectedServices.length}}) Items
+                </div>
+                <div class="bill-details">
+                    <div class="display-flex">
+                        <div> Total Service Charges</div>
+                        <div> {{serviceAmount}}</div>
+                    </div>
+                    <div class="display-flex">
+                        <div> Coupon Discount</div>
+                        <div class="apply-coupon" [routerLink]="['/home/apply-coupon']">Apply Coupon</div>
+                    </div>
+                </div>
+                <div class="display-flex total-bill-details">
+                    <div> Total Amount </div>
+                    <div> {{serviceAmount}}</div>
+                </div>
+            </div>
         </div>
     </div>
+    <ion-footer class="ion-no-border">
+        <ion-toolbar>
+            <div class="appointment-footer">
+                <div (click)="onBookAppointment()" class="default-button">
+                    <button > Book Now</button>
+                </div>
+            </div>
+        </ion-toolbar>
+    </ion-footer>
 </ion-content>
-
-
 <ion-footer class="ion-no-border">
-    <ion-toolbar>
+    <ion-toolbar style="border-top: 1px solid lightgray;">
         <div class="appointment-footer">
             <div class="total-div-container">
                 <div class="total-div">
                     <div class="total-div-price">{{selectedServicesCount}} Services</div>
                 </div>
+                <div style="color: #126d16; font-weight: bold; font-size: 14px">
+                    You Save: 54 ₹
+                </div>
                 <div>
                     {{serviceAmount}} ₹
                 </div>
             </div>
-            <div (click)="onBookAppointment()" class="default-button">
-                <button > Book Now</button>
-            </div>
         </div>
     </ion-toolbar>
 </ion-footer>
+<style>
+
+</style>
+
+

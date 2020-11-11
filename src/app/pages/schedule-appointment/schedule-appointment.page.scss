@@ -166,7 +166,7 @@
 
       .service {
         .single-service {
-          width: 250px;
+          width: 220px;
           margin: 5px 10px;
           padding: 10px;
           border-radius: 15px;
@@ -199,7 +199,8 @@
 
             .combo-name {
               font-size: 16px;
-              color: #666;
+              width: 80%;
+              line-height: 1.4;
             }
           }
 
@@ -212,6 +213,7 @@
             }
             .price-text {
               font-size: 16px;
+              color: #666;
             }
             .service-fees {
               font-size: 24px;
@@ -245,6 +247,8 @@
     background: #d3d3d37d;
     justify-content: space-between;
     border-radius: 7px;
+    align-items: center;
+
     .total-div {
       display: flex;
       .total-div-price {
@@ -275,10 +279,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px;
+  margin: 5px 10px;
   .heading-text {
     font-size: 16px;
   }
 }
 
+.total-bill-container {
+  text-align: left;
+  padding: 0 20px;
+  font-size: 16px;
+  .bill-header {
+    padding: 15px 0;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .bill-details {
+    padding: 15px 0;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .apply-coupon {
+      color: #cc2b5e;
+      font-size: 14px;
+    }
+  }
+
+  .total-bill-details {
+    padding: 10px 0;
+  }
+}
 

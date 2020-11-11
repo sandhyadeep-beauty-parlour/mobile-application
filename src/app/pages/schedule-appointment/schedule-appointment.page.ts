@@ -27,36 +27,7 @@ export class ScheduleAppointmentPage implements OnInit {
     'August', 'September', 'October', 'November', 'December'];
   shortDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   timeSlots = ['10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', '06:00 PM'];
-  selectedServices = [
-    {
-      serviceName: 'Face - Full face Waxing',
-      duration: '15',
-      price: '250',
-      mainServiceId: 2,
-      type: 'convincing/frequent'
-    },
-    {
-      serviceName: 'Under arms Waxing',
-      duration: '25',
-      price: '50',
-      mainServiceId: 2,
-      type: 'convincing/frequent'
-    },
-    {
-      serviceName: 'Half legs',
-      duration: '10',
-      price: '180',
-      mainServiceId: 2,
-      type: 'convincing/frequent'
-    },
-    {
-      serviceName: 'Full legs',
-      duration: '25',
-      price: '350',
-      mainServiceId: 2,
-      type: 'convincing/frequent'
-    }
-  ];
+  selectedServices = [];
   mainServices = [];
   services = [];
   packages = [];
@@ -94,6 +65,7 @@ export class ScheduleAppointmentPage implements OnInit {
       return acc;
     }, 0);
     this.selectedServicesCount = this.services.filter(v => v.isChecked).length;
+    this.selectedServices = this.services.filter(v => v.isChecked);
   }
 
   onToggleCombo(combo) {
@@ -122,6 +94,7 @@ export class ScheduleAppointmentPage implements OnInit {
     this.packages = res;
     this.packages = this.packages.map((val) => {
       val.servicesList = this.services.filter(v => val.services.includes(v.id));
+      val.comboName = val.servicesList.map(v => v.serviceName).join(' + ');
       val.actualPrice = val.servicesList.reduce((acc, first) => {
         acc = acc + parseInt(first.price, 10);
         return acc;
