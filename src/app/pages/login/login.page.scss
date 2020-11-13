@@ -186,12 +186,12 @@ ion-datetime.default {
 }
 
 .back-container {
+  position: absolute;
   .back-button {
     display: inline-block;
     padding: 2px 7px;
-    border: 1px solid;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     color: #901180;
-    font-size: $font-size-1;
+    font-size: $font-size-3;
   }
 }
