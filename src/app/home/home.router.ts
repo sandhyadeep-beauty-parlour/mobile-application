@@ -50,6 +50,10 @@ const routes: Routes = [
                 path: 'schedule-appointment',
                 loadChildren: () => import('../pages/schedule-appointment/schedule-appointment.module')
                     .then((e) => e.ScheduleAppointmentModule)
+            }, {
+                path: 'payments',
+                loadChildren: () => import('../pages/payment/payment.module')
+                    .then((e) => e.PaymentModule)
             }
         ]
     }];

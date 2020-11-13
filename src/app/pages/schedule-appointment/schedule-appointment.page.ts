@@ -128,6 +128,6 @@ export class ScheduleAppointmentPage implements OnInit {
   }
 
   onBookAppointment() {
-    this.router.navigate(['home/schedule-appointment']);
+    this.router.navigate(['home/payments']);
   }
 }

@@ -9,6 +9,7 @@ import {ServicePageRoutingModule} from './services-routing.module';
 import {ServicesPage} from './services.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
 import {SearchHeaderComponentModule} from '../../shared-components/search-header-component/search-header-component.module';
+import {ServicesListModule} from '../../shared-components/services-list/services-list.module';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import {SearchHeaderComponentModule} from '../../shared-components/search-header
         IonicModule,
         ServicePageRoutingModule,
         HeaderModule,
-        SearchHeaderComponentModule
+        SearchHeaderComponentModule,
+        ServicesListModule
     ],
     exports: [
         ServicesPage

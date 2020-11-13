@@ -13,6 +13,7 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {ModalPopupModule} from '../../shared-components/modal-popup/modal-popup.module';
 import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
 import {SearchHeaderComponentModule} from '../../shared-components/search-header-component/search-header-component.module';
+import {ServicesListModule} from '../../shared-components/services-list/services-list.module';
 @NgModule({
     imports: [
         CommonModule,
@@ -23,7 +24,8 @@ import {SearchHeaderComponentModule} from '../../shared-components/search-header
         ServicePageModule,
         SlickCarouselModule,
         ModalPopupModule,
-        SearchHeaderComponentModule
+        SearchHeaderComponentModule,
+        ServicesListModule
     ],
     entryComponents: [ModalPopupPage],
     declarations: [AboutUsPage]

@@ -1,0 +1,142 @@
+<back-logo-header></back-logo-header>
+<ion-content>
+  <div class="page-container">
+      <div class="item-list">
+        <div class="page-heading">
+          <div class="heading-text">
+            <b>Payments</b>
+          </div>
+        </div>
+        <div style="border-bottom: 5px solid #d3d3d396; border-top: 5px solid #d3d3d396; padding: 5px 0;">
+          <div class="item-container">
+            <div (click)="show = 'upi'" class="main-item-name-container border-bottom">
+              <div class="main-item-name-sub-container">
+                <img src="assets/upi_payments.jpg" alt="">
+                <div [class.text-bold]="show === 'upi'" class="main-item-name">PHONE PAY/ GOOGLE PAY/ BHIM UPI</div>
+              </div>
+              <div class="main-item-arrow">
+                <i class="right-icon fa fa-angle-right" [class.down]="show === 'upi'">
+
+                </i>
+              </div>
+            </div>
+            <div class="sub-item-list" [class.opened]="show === 'upi'">
+              <div class="sub-item-container">
+                <div class="sub-item-name">
+                  <label class="name">jhaksjhdkjash</label>
+                </div>
+                <div class="sub-item-checkbox">
+                  <ion-checkbox class="zoom-07" color="primary" ></ion-checkbox>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-container">
+            <div (click)="show = 'cards'" class="main-item-name-container border-bottom">
+              <div class="main-item-name-sub-container">
+                <img src="assets/cards-icon.png" alt="">
+                <div [class.text-bold]="show === 'cards'" class="main-item-name">CREDIT/DEBIT CARD</div>
+              </div>
+              <div class="main-item-arrow">
+                <i class="right-icon fa fa-angle-right" [class.down]="show === 'cards'"></i>
+              </div>
+            </div>
+            <div class="sub-item-list" [class.opened]="show === 'cards'">
+              <div class="custom-input-container">
+                <div class="custom-input-box">
+                  <div class="custom-input flex-70">
+                    <input placeholder="Card Number" type="text" />
+                  </div>
+                  <div class="custom-input-button">
+                    <img src="assets/credit-card.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="custom-input-container">
+                <div class="custom-input-box">
+                  <div class="custom-input flex-90">
+                    <input placeholder="Name on card" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex">
+                <div style="padding-right: 5px; flex-basis: 70%">
+                  <div class="custom-input-container">
+                    <div class="custom-input-box">
+                      <div class="custom-input flex-90">
+                        <input placeholder="Valid Thru (MM/YY)" type="text" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="custom-input-container">
+                    <div class="custom-input-box">
+                      <div class="custom-input flex-90">
+                        <input placeholder="CVV" type="text" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-container">
+            <div (click)="show = 'wallet'" class="main-item-name-container border-bottom">
+              <div class="main-item-name-sub-container">
+                <img src="assets/wallet.png" alt="">
+                <div [class.text-bold]="show === 'wallet'" class="main-item-name">PAYTM/WALLETS</div>
+              </div>
+              <div class="main-item-arrow">
+                <i class="right-icon fa fa-angle-right" [class.down]="show === 'wallet'"></i>
+              </div>
+            </div>
+            <div class="sub-item-list" [class.opened]="show === 'wallet'">
+              <div class="sub-item-container">
+                <div class="sub-item-name">
+                  <label class="name">Debit Card</label>
+                </div>
+                <div class="sub-item-checkbox">
+                  <ion-checkbox class="zoom-07" color="primary" ></ion-checkbox>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-container">
+            <div (click)="show = 'net_banking'" class="main-item-name-container">
+              <div class="main-item-name-sub-container">
+                <img src="assets/net-banking.png" alt="">
+                <div [class.text-bold]="show === 'net_banking'" class="main-item-name">NET BANKING</div>
+              </div>
+              <div class="main-item-arrow">
+                <i class="right-icon fa fa-angle-right" [class.down]="show === 'net_banking'"></i>
+              </div>
+            </div>
+            <div class="sub-item-list" [class.opened]="show === 'net_banking'">
+              <div class="sub-item-container">
+                <div class="sub-item-name">
+                  <label class="name">Debit Card</label>
+                </div>
+                <div class="sub-item-checkbox">
+                  <ion-checkbox class="zoom-07" color="primary" ></ion-checkbox>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="coupon-footer">
+      <div class="coupon-button-container">
+        <div class="coupon-discount">600 ₹</div>
+        <div class="details">View Details</div>
+      </div>
+      <div class="default-button">
+        <button>PAY NOW</button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

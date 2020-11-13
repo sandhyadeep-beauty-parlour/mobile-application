@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^10.2.1",
+    "@angular/animations": "^10.2.3",
     "@angular/cdk": "^10.2.6",
     "@angular/common": "~8.2.14",
     "@angular/core": "~8.2.14",
@@ -34,6 +34,7 @@
     "jquery": "^3.5.1",
     "lightbox2": "^2.11.3",
     "ngx-slick-carousel": "^0.5.1",
+    "ngx-toastr": "^13.1.0",
     "rxjs": "^6.6.3",
     "screenfull": "^3.3.0",
     "slick-carousel": "^1.8.1",

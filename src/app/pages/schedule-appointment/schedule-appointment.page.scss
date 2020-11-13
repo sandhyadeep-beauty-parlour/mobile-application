@@ -1,4 +1,7 @@
+@import "../../../sandhyadeep-theme";
+
 .schedule-appointment-container {
+  font-size: 14px;
   .calender-body {
     margin-top: 5px;
     display: flex;
@@ -86,7 +89,7 @@
           text-align: left;
           border: 1px solid lightgray;
           line-height: 1.2;
-          min-height: 200px;
+          min-height: 170px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -98,7 +101,7 @@
               height: 5px;
             }
             .main-service-name {
-              font-size: 16px;
+              font-size: 14px;
               color: #666;
             }
             .service-name {
@@ -106,14 +109,14 @@
               font-size: 16px;
             }
             .service-duration {
-              font-size: 16px;
+              font-size: 14px;
               color: #666;
             }
           }
 
           .service-price-container {
             .price-text {
-              font-size: 16px;
+              font-size: 14px;
             }
             .service-fees {
               font-size: 24px;
@@ -173,7 +176,7 @@
           text-align: left;
           border: 1px solid lightgray;
           line-height: 1.2;
-          min-height: 150px;
+          min-height: 130px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -212,7 +215,7 @@
               padding: 5px 0;
             }
             .price-text {
-              font-size: 16px;
+              font-size: 14px;
               color: #666;
             }
             .service-fees {
@@ -240,7 +243,7 @@
 .appointment-footer {
   display: flex;
   flex-direction: column;
-  padding: 10px 15px;
+  padding: 5px 15px;
   .total-div-container {
     display: flex;
     padding: 10px;
@@ -261,12 +264,13 @@
 .default-button {
   color: white;
   padding: 15px;
-  margin: 15px 0;
+  margin: 5px 0;
   display: flex;
   border-radius: 7px;
   justify-content: center;
   text-align: center;
   background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
+  height: $button-height;
   button {
     font-size: 16px;
     font-weight: bold;
@@ -281,21 +285,21 @@
   align-items: center;
   margin: 5px 10px;
   .heading-text {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 .total-bill-container {
   text-align: left;
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 14px;
   .bill-header {
-    padding: 15px 0;
+    padding: 10px 0 5px;
     border-bottom: 1px solid lightgray;
   }
 
   .bill-details {
-    padding: 15px 0;
+    padding: 5px 0;
     border-bottom: 1px solid lightgray;
   }
 
@@ -310,7 +314,7 @@
   }
 
   .total-bill-details {
-    padding: 10px 0;
+    padding: 5px 0;
   }
 }
 

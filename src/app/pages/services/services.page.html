@@ -6,35 +6,7 @@
                 <b>Services</b>
             </div>
         </div>
-        <div class="item-list">
-            <div *ngFor="let mainService of mainServices" class="item-container">
-                <div (click)="mainService.show = !mainService.show" class="main-item-name-container">
-                    <div class="main-item-name-sub-container">
-                        <img src="{{mainService.url}}" alt="">
-                        <div [class.text-bold]="mainService.show" class="main-item-name">{{mainService.name}} </div>
-                    </div>
-                    <div class="main-item-arrow">
-                        <i class="right-icon fa fa-angle-right" [class.down]="mainService.show"></i>
-                    </div>
-                </div>
-                <div class="sub-item-list" [class.opened]="mainService.show">
-                    <div style="padding: 15px" *ngIf="mainService.services?.length === 0"> We dont have any services available </div>
-                    <ng-container *ngFor="let service of mainService.services; let index = index" >
-                        <div (click)="onSelectServices(service)" class="sub-item-container">
-                            <div class="sub-item-name">
-                                <label class="name">{{service.serviceName}}</label>
-                                <div class="time">{{service.duration ? service.duration + ' Minutes' : ''}}</div>
-                            </div>
-                            <div class="sub-item-price"><div class="color-666">Price: </div>
-                                {{service.price}} ₹</div>
-                            <div class="sub-item-checkbox">
-                                <ion-checkbox color="primary" [(ngModel)]="service.isChecked"></ion-checkbox>
-                            </div>
-                        </div>
-                    </ng-container>
-                </div>
-            </div>
-        </div>
+        <service-list (updateAmount)="updateData($event)"></service-list>
     </div>
 </ion-content>
 <ion-footer class="ion-no-border">

@@ -32,7 +32,7 @@
                         <div (click)="onToggleService(service)" class="single-service">
                             <div class="service-details-container">
                                 <div class="service-checkbox">
-                                    <ion-checkbox [(ngModel)]="service.isChecked" color="primary"></ion-checkbox>
+                                    <ion-checkbox class="zoom-07" [(ngModel)]="service.isChecked" color="primary"></ion-checkbox>
                                 </div>
                                 <div class="main-service-name">{{service.mainServiceName | titlecase}}</div>
                                 <div class="service-name">{{service.serviceName | titlecase}}</div>
@@ -66,7 +66,7 @@
                         <div (click)="onToggleCombo(pack)" class="single-service">
                             <div class="service-details-container">
                                 <div class="service-checkbox">
-                                    <ion-checkbox [(ngModel)]="pack.isChecked" color="primary"></ion-checkbox>
+                                    <ion-checkbox class="zoom-07" [(ngModel)]="pack.isChecked" color="primary"></ion-checkbox>
                                 </div>
                                 <div class="combo-name">{{pack.comboName | titlecase}}</div>
                             </div>

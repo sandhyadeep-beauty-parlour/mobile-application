@@ -3,7 +3,7 @@ import {ApiService} from '../../api.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-messages',
+  selector: 'apply-coupon',
   templateUrl: './apply-coupon.page.html',
   styleUrls: ['./apply-coupon.page.scss'],
 })

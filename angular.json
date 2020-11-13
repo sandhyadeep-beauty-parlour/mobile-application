@@ -46,6 +46,9 @@
               },
               {
                 "input": "node_modules/lightbox2/dist/css/lightbox.min.css"
+              },
+              {
+                "input": "node_modules/ngx-toastr/toastr.css"
               }
 
             ],

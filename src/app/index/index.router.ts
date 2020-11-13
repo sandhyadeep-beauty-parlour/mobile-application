@@ -13,7 +13,7 @@ const routes: Routes = [
             // },
             {
                 path: '',
-                loadChildren: () => import('../pages/login-image-background/login-image-background.module').then((e) => e.LoginImageBackgroundPageModule)
+                loadChildren: () => import('../pages/login/login.module').then((e) => e.LoginPageModule)
             }, {
                 path: 'signup',
                 loadChildren: () => import('../pages/signup/signup.module').then((e) => e.SignupPageModule)

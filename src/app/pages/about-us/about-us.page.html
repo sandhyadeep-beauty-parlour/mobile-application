@@ -85,130 +85,26 @@
                 </div>
                 <div *ngIf="selectedMenu === 'services'" class="services-container">
                     <div class="page-container">
-<!--                        <div class="page-heading">-->
-<!--                            <div class="heading-text">-->
-<!--                                <b>Services</b>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                        <div class="item-list">
-                            <div class="item-container">
-                                <div (click)="show = !show" class="main-item-name-container">
-                                    <div class="main-item-name">Name</div>
-                                    <div class="main-item-arrow">
-                                        <i class="right-icon fa fa-angle-right" [class.down]="show"></i>
-                                    </div>
-                                </div>
-                                <div class="sub-item-list" [class.opened]="show">
-                                    <div class="sub-item-container">
-                                        <div class="sub-item-name">
-                                            <div class="name">Sub Item Name</div>
-                                            <div class="time">15 Minutes</div>
-                                        </div>
-                                        <div class="sub-item-price">
-                                            <div class="color-666">Price:</div>
-                                            30$
-                                        </div>
-                                        <div class="sub-item-checkbox">
-                                            <ion-checkbox color="primary"></ion-checkbox>
-                                        </div>
-                                    </div>
-                                    <div class="sub-item-container">
-                                        <div class="sub-item-name">
-                                            <div class="name">Sub Item Name</div>
-                                            <div class="time">15 Minutes</div>
-                                        </div>
-                                        <div class="sub-item-price">
-                                            <div class="color-666">Price:</div>
-                                            30$
-                                        </div>
-                                        <div class="sub-item-checkbox">
-                                            <ion-checkbox color="primary"></ion-checkbox>
-                                        </div>
-                                    </div>
-                                    <div class="sub-item-container">
-                                        <div class="sub-item-name">
-                                            <div class="name">Sub Item Name</div>
-                                            <div class="time">15 Minutes</div>
-                                        </div>
-                                        <div class="sub-item-price">
-                                            <div class="color-666">Price:</div>
-                                            30$
-                                        </div>
-                                        <div class="sub-item-checkbox">
-                                            <ion-checkbox color="primary"></ion-checkbox>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container">
-                                <div (click)="show1 = !show1" class="main-item-name-container">
-                                    <div class="main-item-name">Name</div>
-                                    <div class="main-item-arrow">
-                                        <i class="right-icon fa fa-angle-right" [class.down]="show1"></i>
-                                    </div>
-                                </div>
-                                <div class="sub-item-list" [class.opened]="show1">
-                                    <div class="sub-item-container">
-                                        <div class="sub-item-name">
-                                            <div class="name">Sub Item Name</div>
-                                            <div class="time">15 Minutes</div>
-                                        </div>
-                                        <div class="sub-item-price">
-                                            <div class="color-666">Price:</div>
-                                            30$
-                                        </div>
-                                        <div class="sub-item-checkbox">
-                                            <ion-checkbox color="primary"></ion-checkbox>
-                                        </div>
-                                    </div>
-                                    <div class="sub-item-container">
-                                        <div class="sub-item-name">
-                                            <div class="name">Sub Item Name</div>
-                                            <div class="time">15 Minutes</div>
-                                        </div>
-                                        <div class="sub-item-price">
-                                            <div class="color-666">Price:</div>
-                                            30$
-                                        </div>
-                                        <div class="sub-item-checkbox">
-                                            <ion-checkbox color="primary"></ion-checkbox>
-                                        </div>
-                                    </div>
-                                    <div class="sub-item-container">
-                                        <div class="sub-item-name">
-                                            <div class="name">Sub Item Name</div>
-                                            <div class="time">15 Minutes</div>
-                                        </div>
-                                        <div class="sub-item-price">
-                                            <div class="color-666">Price:</div>
-                                            30$
-                                        </div>
-                                        <div class="sub-item-checkbox">
-                                            <ion-checkbox color="primary"></ion-checkbox>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ion-footer class="ion-no-border">
-                            <ion-toolbar>
-                                <div class="appointment-footer">
-                                    <div class="total-div-container">
-                                        <div class="total-div">
-                                            <div>Total</div>
-                                            <div class="total-div-price">3 Services</div>
-                                        </div>
-                                        <div>
-                                            $354
-                                        </div>
-                                    </div>
-                                    <div class="default-button">
-                                        <button (click)="onBookAppointment()"> Book Appointment</button>
-                                    </div>
-                                </div>
-                            </ion-toolbar>
-                        </ion-footer>
+                        <service-list (updateAmount)="updateData($event)"></service-list>
                     </div>
+                    <ion-footer *ngIf="selectedMenu === 'services'" class="ion-no-border">
+                        <ion-toolbar>
+                            <div class="appointment-footer">
+                                <div class="total-div-container">
+                                    <div class="total-div">
+                                        <div>Total</div>
+                                        <div class="total-div-price">{{selectedServices}} Services</div>
+                                    </div>
+                                    <div>
+                                        {{amountPurchased}} ₹
+                                    </div>
+                                </div>
+                                <div (click)="onBookAppointment()" class="default-button">
+                                    <button> Book Appointment</button>
+                                </div>
+                            </div>
+                        </ion-toolbar>
+                    </ion-footer>
                 </div>
                 <div *ngIf="selectedMenu === 'owner'" class="owner-container">
                     <div class="ion-image-slides border-bottom">
@@ -302,3 +198,4 @@
         </div>
     </script>
 </ion-content>
+

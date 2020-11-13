@@ -1,12 +1,12 @@
-.top-adjust {
-  top: 65px;
-}
+@import "../../../sandhyadeep-theme";
+
 .logo-container {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
   .logo-text {
-    font-size: 20px; font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
   }
   .slogan-text {
     font-size: 8px;
@@ -35,7 +35,7 @@
   align-items: center;
   margin: 18px 0 5px;
   .heading-text {
-    font-size: 24px;
+    font-size: $header-size;
   }
 }
 
@@ -130,6 +130,7 @@
 
 .menu-container {
   padding: 0 15px;
+  font-size: $regular-font-size;
 }
 
 .products_container {
@@ -172,8 +173,6 @@
       align-items: center;
       .product-name-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
       }
       .product-name {

@@ -18,6 +18,8 @@ export class AboutUsPage implements OnInit {
   };
   show = true;
   selectedMenu = 'about_us';
+  amountPurchased = 0;
+  selectedServices = 0;
 
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
   @ViewChild('slideWithNav2', { static: false }) slideWithNav2: IonSlides;
@@ -232,5 +234,10 @@ export class AboutUsPage implements OnInit {
 
   backClicked() {
     this.location.back();
+  }
+
+  updateData(data) {
+    this.selectedServices = data.selectedServices;
+    this.amountPurchased = data.amountPurchased;
   }
 }

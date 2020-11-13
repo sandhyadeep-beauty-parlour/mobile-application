@@ -1,6 +1,13 @@
+
 <ion-content>
     <div class="login-main-container">
+
         <div class="login-container">
+            <div *ngIf="isContinue" class="back-container">
+                <div (click)="isContinue = !isContinue" class="back-button">
+                    <i class="fa fa-angle-left"></i> Back
+                </div>
+            </div>
             <div class="logo-container">
                 <div class="logo-image"></div>
                 <div class="logo-text">
@@ -10,26 +17,46 @@
                     Have a hair affair with us
                 </div>
             </div>
-            <div class="form-main-container">
-                <form>
+            <div *ngIf="!isContinue" class="login-buttons">
+                <div (click)="onContinue()" class="create-account-button fb-button">
+                    <i class="fa fa-facebook-square"></i> <div> Login with Facebook </div>
+                </div>
+                <div (click)="onContinue()" class="create-account-button insta-button">
+                    <i class="fa fa-instagram"></i> <div> Login with Instagram </div>
+                </div>
+                <div (click)="onContinue()" class="create-account-button only-button">
+                    <i class="fa fa-user-circle"></i> <div> Create New Account </div>
+                </div>
+            </div>
+            <div *ngIf="isContinue" class="form-main-container">
+                <form [formGroup]='loginForm'>
                     <div class="form-container">
                         <div class="form-input-container">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                                <input formControlName="name" type="text" class="default form-control" name="name" placeholder="Enter Your Name">
                             </div>
                         </div>
                         <div class="form-input-container">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <input formControlName="mobileNumber" type="text" class="default form-control" name="email" placeholder="Enter Mobile Number">
                             </div>
                         </div>
-                        <div class="login-button">
-                            <button (click)="onLogIn()"> Log in</button>
+                        <div class="form-input-container">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <ion-datetime formControlName="dob" class="default form-control" placeholder="Date of Birth" display-timezone="ist"></ion-datetime>
+                            </div>
                         </div>
-                        <div class="link-signup" (click)="goToSignup()">
-                            I need complete Makeover!
+                        <div class="form-input-container">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-at"></i></span>
+                                <input  formControlName="email" type="email" class="default form-control" name="email" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div (click)="onLogIn()" class="login-button">
+                            <button> Continue <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </form>

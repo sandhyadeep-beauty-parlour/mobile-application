@@ -1,33 +1,52 @@
+@import "../../../sandhyadeep-theme";
 
 .input-group {
   margin-bottom: 10px;
+  height: 45px;
   .input-group-addon {
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: $font-size-1;
     font-weight: 400;
     line-height: 1;
-    color: #555;
+    color: #fff;
     text-align: center;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    //border-radius: 4px;
+    background-color: #901180;
+    border: 1px solid #901180;
     display: flex;
     align-items: center;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    min-width: 42px;
+    justify-content: center;
   }
 }
+
+input.default {
+  border: 1px solid #901180 !important;
+}
+
+ion-datetime.default {
+  border: 1px solid #901180 !important;
+}
+
 .login-main-container {
   /*background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(147, 18, 152) 63%);*/
-  background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+  //background: linear-gradient(214deg, rgba(40, 29, 232, 1) -25%, rgb(81, 36, 82) 63%);
+  background: url("src/assets/image.jpg");
   height: 100%;
   display: flex;
-  font-size: 16px;
+  font-size: $regular-font-size;
   align-items: center;
   justify-content: center;
-  align-content: center
+  align-content: center;
+  background-size: cover;
 }
 
 .login-main-container .login-container {
-  width: 70%
+  width: 80%;
+  padding: 15px;
+  background: #ffffff78;
+  border-radius: 15px;
 }
 
 .login-main-container .login-container .logo-container {
@@ -36,6 +55,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 1.2;
 }
 
 .login-main-container .login-container .logo-container .logo-image {
@@ -45,53 +65,70 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  border: 10px solid #fff;
   background-position: center center;
 }
 
 .login-main-container .login-container .logo-container .slogan-text {
-  color: white;
+  color: #901180;
   margin-bottom: 10%;
   font-size: 12px;
 }
 .login-main-container .login-container .logo-container .logo-text {
   font-size: 30px;
-  font-style: italic;
-  color: #fff;
+  color: #901180;
   font-weight: 700;
 }
 
 .login-main-container .login-container .form-main-container {
+  display: flex;
+  justify-content: center;
+  form {
+    width: 90%;
+  }
 }
 
 .login-main-container .login-container .form-main-container .form-container {
 }
 
-.login-main-container .login-container .form-main-container .form-container .link-signup{
+.login-main-container .login-container .form-main-container .form-container .link-signup {
+  a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #901180;
+  }
   text-align: center;
-  font-size: 12px;
-  color: #fff;
 }
 
 .login-main-container .login-container .form-main-container .form-container .login-button {
-  padding: 8px;
+  color: white;
+  padding: 9px 15px;
   margin: 30px 0 5px;
   display: flex;
   border-radius: 5px;
   justify-content: center;
-  background: #fff;
   text-align: center;
+  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
+  height: $button-height;
 }
 
 .login-main-container .login-container .form-main-container .form-container .login-button button {
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: $font-size-1;
   font-weight: bold;
   background: transparent;
-  color: rgb(97, 17, 101);
+  color: white;
 }
 
 .login-main-container .login-container .form-main-container .form-container .form-input-container {
+  input {
+    font-size: $font-size-1;
+    height: 100%;
+  }
+  ion-datetime {
+    font-size: $font-size-1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .login-main-container .login-container .form-main-container .form-container .form-input-container .form-input::placeholder {
@@ -107,3 +144,54 @@
   background-color: transparent;
 }
 
+.login-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .create-account-button {
+    padding: 6px;
+    width: 90%;
+    text-align: center;
+    font-size: $font-size-1;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    border-radius: 0.25rem;
+    height: 45px;
+    &.only-button {
+      background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
+      color: white;
+    }
+
+    &.fb-button {
+      background: #3B5999;
+      color: white;
+    }
+
+    &.insta-button {
+      color: white;
+      background: #c32aa3;
+    }
+
+    i {
+      margin: 0 12px;
+      font-size: 22px;
+    }
+  }
+
+  img {
+    height: 40px;
+  }
+}
+
+.back-container {
+  .back-button {
+    display: inline-block;
+    padding: 2px 7px;
+    border: 1px solid;
+    border-radius: .25rem;
+    color: #901180;
+    font-size: $font-size-1;
+  }
+}

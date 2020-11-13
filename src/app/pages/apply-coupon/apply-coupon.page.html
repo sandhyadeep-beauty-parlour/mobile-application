@@ -14,7 +14,7 @@
     <div class="coupon-cards-container">
       <div (click)="onSelectCoupon(coupon)" *ngFor="let coupon of couponList" class="coupon-card">
         <div class="coupon-checkbox">
-          <ion-checkbox [checked]="selectedCoupon === coupon.couponId" color="primary"></ion-checkbox>
+          <ion-checkbox class="zoom-07" [checked]="selectedCoupon === coupon.couponId" color="primary"></ion-checkbox>
         </div>
         <div class="coupon-details">
           <div class="coupon">{{coupon.couponId}}</div>

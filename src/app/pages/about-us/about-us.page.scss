@@ -17,68 +17,6 @@
   }
 }
 
-.item-list {
-  .item-container {
-    margin-bottom: 15px;
-
-    .main-item-name-container {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 0;
-      border-bottom: 1px solid lightgray;
-
-      .main-item-name {
-        font-size: 18px;
-      }
-
-      .main-item-arrow {
-        color: #666;
-
-        .right-icon {
-        }
-      }
-    }
-
-    .sub-item-list {
-      max-height: 0;
-      overflow-y: hidden;
-      transition: ease-in-out 400ms max-height;
-
-      &.opened {
-        max-height: 500px;
-        transition: ease-in-out 600ms max-height;
-      }
-
-      .sub-item-container {
-        display: flex;
-        padding: 5px 0;
-        border-bottom: 1px solid lightgray;
-        justify-content: space-between;
-        align-items: center;
-
-        .sub-item-name {
-          flex-basis: 50%;
-
-          .name {
-            font-size: 16px;
-          }
-
-          .time {
-            font-size: 14px;
-            color: #666;
-          }
-        }
-
-        .sub-item-price {
-        }
-
-        .sub-item-checkbox {
-          display: flex;
-        }
-      }
-    }
-  }
-}
 
 .down {
   transform: rotate(90deg);

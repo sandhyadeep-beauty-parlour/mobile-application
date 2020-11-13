@@ -1,5 +1,6 @@
 body {
   background-color: white !important;
+  font-size: 14px;
 }
 
 .swiper-pagination-bullet-active {
@@ -7,3 +8,14 @@ body {
   background: #753a88 !important;
   border: 1px solid pink;
 }
+
+.zoom-07 {
+  zoom: 0.7;
+}
+
+:root {
+  .tick-icon {
+    color: green;
+  }
+}
+
