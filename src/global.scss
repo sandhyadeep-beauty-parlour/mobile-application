@@ -27,3 +27,11 @@
 @import "app/app.component";
 // regular style toast
 @import '~ngx-toastr/toastr';
+
+.modal-wrapper{
+  background: transparent !important;
+}
+
+.sc-ion-modal-ios-h {
+  background: transparent !important;
+}

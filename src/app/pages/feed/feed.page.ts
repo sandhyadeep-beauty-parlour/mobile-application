@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
+import {ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-feed',
@@ -10,8 +12,12 @@ export class FeedPage implements OnInit {
   slideOpts = {
     initialSlide: 1,
     speed: 400,
-    autoplay: true
+    autoplay: true,
+    zoom: {
+      maxRatio: 3,
+    }
   };
+
   brandsList = [
     {
       name: 'Matrix',
@@ -155,4 +161,6 @@ export class FeedPage implements OnInit {
   onKnowMore() {
     this.router.navigate(['home/about-us']);
   }
+
+
 }

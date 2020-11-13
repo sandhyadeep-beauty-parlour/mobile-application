@@ -11,7 +11,7 @@
     <div class="portfolio-container">
         <div class="photos-container">
             <div class="photo left" *ngFor="let image of imagesData; let index = index">
-                <div (click)="onLike(imagesData, index)" class="single-photo">
+                <div (dblclick)="onLike(imagesData, index)" (click)="showImage(image.url)" class="single-photo">
                     <svg class="icon icon-heart" [class.like]="image.check">
                         <use xlink:href="#icon-heart"></use>
                     </svg>
@@ -28,7 +28,7 @@
         </div>
         <div class="photos-container">
             <div class="photo right" *ngFor="let image of imagesData1; let index = index">
-                <div (click)="onLike(imagesData1, index)" class="single-photo">
+                <div (dblclick)="onLike(imagesData1, index)" (click)="showImage(image.url)" class="single-photo">
                     <svg class="icon icon-heart" [class.like]="image.check">
                         <use xlink:href="#icon-heart"></use>
                     </svg>

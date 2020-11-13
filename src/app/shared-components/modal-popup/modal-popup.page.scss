@@ -1,0 +1,14 @@
+ion-content{
+  --background: transparent;
+}
+.image-zoom-container {
+  display: flex; justify-content: center; height: 100%;
+}
+
+.cross-icon {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  float: right;
+}

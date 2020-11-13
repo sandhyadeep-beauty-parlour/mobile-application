@@ -1,20 +1,14 @@
 <ion-header>
-  <ion-toolbar color="danger">
-    <ion-title>my-modal</ion-title>
-  </ion-toolbar>
+  <div (click)="closeModal()" class="cross-container"><ion-icon class="cross-icon" name="close-outline"></ion-icon></div>
 </ion-header>
-
-<ion-content class="ion-padding">
-
-  <ion-grid>
-    <ion-row>
-      <ion-col text-center>
-        ID : {{modelId}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col text-center>
-        <ion-button (click)="closeModal()">Close Modal</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content>
+  <div class="image-zoom-container">
+    <ion-slides  zoom [options]="slideOptsTest">
+      <ion-slide>
+        <div class="swiper-zoom-container">
+          <img src="{{imageUrl}}" alt="">
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

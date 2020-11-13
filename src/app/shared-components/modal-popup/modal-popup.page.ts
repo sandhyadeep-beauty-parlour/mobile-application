@@ -8,16 +8,21 @@ import {ModalController, NavParams} from '@ionic/angular';
 })
 export class ModalPopupPage implements OnInit {
   modalTitle: string;
-  modelId: number;
+  imageUrl: string;
 
   constructor(
       private modalController: ModalController,
       private navParams: NavParams
   ) { }
 
+  slideOptsTest = {
+    zoom: {
+      maxRatio: 3,
+    }
+  };
+
   ngOnInit() {
-    console.table(this.navParams);
-    this.modelId = this.navParams.data.paramID;
+    this.imageUrl = this.navParams.data.imageUrl;
     this.modalTitle = this.navParams.data.paramTitle;
   }
 

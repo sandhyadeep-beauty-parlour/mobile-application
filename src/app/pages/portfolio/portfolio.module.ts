@@ -8,6 +8,8 @@ import {PortfolioRoutingModule} from './portfolio-routing.module';
 
 import {PortfolioPage} from './portfolio.page';
 import {HeaderModule} from '../../shared-components/header-component/header-component.module';
+import {ModalPopupModule} from '../../shared-components/modal-popup/modal-popup.module';
+import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
 
 @NgModule({
     imports: [
@@ -15,8 +17,10 @@ import {HeaderModule} from '../../shared-components/header-component/header-comp
         FormsModule,
         IonicModule,
         PortfolioRoutingModule,
-        HeaderModule
+        HeaderModule,
+        ModalPopupModule
     ],
+    entryComponents: [ModalPopupPage],
     declarations: [PortfolioPage]
 })
 export class PortfolioModule {
