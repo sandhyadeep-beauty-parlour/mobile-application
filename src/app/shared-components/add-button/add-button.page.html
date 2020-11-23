@@ -1,0 +1,18 @@
+<div class="add-item">
+  <div *ngIf="counter === 0" class="custom-add-button">
+    <div class="add-text">Add</div>
+    <i (click)="onChange('plus')"
+       class="fa fa-plus"></i>
+  </div>
+  <div *ngIf="counter > 0" class="custom-add-more-button">
+    <div (click)="onChange('minus')">
+      <i class="fa fa-minus"></i>
+    </div>
+    <div class="in-cart-box">
+      {{counter}}
+    </div>
+    <div (click)="onChange('plus')">
+      <i class="fa fa-plus"></i>
+    </div>
+  </div>
+</div>

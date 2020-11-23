@@ -471,39 +471,3 @@
   }
 }
 
-.add-item {
-  .custom-add-button {
-    display: flex; justify-content: space-between;
-    align-items: center; border: 1px solid #753a88;
-    .add-text {
-      padding: 3px 5px;
-    }
-    i.fa.fa-plus {
-      padding: 5px;
-      background: #753a88;
-      color: white;
-    }
-  }
-  .custom-add-more-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #753a88;
-    .add-text {
-      padding: 3px 5px;
-    }
-    .in-cart-box {
-      padding: 0 6px;
-    }
-    i.fa.fa-plus {
-      padding: 5px;
-      background: #753a88;
-      color: white;
-    }
-    i.fa.fa-minus {
-      padding: 5px;
-      background: #753a88;
-      color: white;
-    }
-  }
-}

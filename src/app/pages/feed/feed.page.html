@@ -39,8 +39,8 @@
             <div [routerLink]="['/home/packages']" class="know-more">See All <i class="fa fa-angle-right"></i></div>
         </div>
         <div class="slide_container">
-            <div *ngFor="let package of packages" class="slider">
-                <img src="{{package.url}}" alt="">
+            <div *ngFor="let packageData of packageList" class="slider" (click)="onClickPackage(packageData.id)">
+                <img src="{{packageData?.displayImage}}" alt="">
             </div>
         </div>
 
@@ -51,7 +51,7 @@
             <div [routerLink]="['/home/products']" class="know-more">See All <i class="fa fa-angle-right"></i></div>
         </div>
         <div class="products_container">
-            <div *ngFor="let product of productImages" class="image-slider-container">
+            <div *ngFor="let product of productImages, let index = index" class="image-slider-container">
                 <div class="slider-image">
                     <img src="{{product.url}}" alt="">
                 </div>
@@ -71,25 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="add-item">
-                        <div *ngIf="!product.inCart" class="custom-add-button">
-                            <div class="add-text">Add</div>
-                            <i (click)="product.addedInCart = product.addedInCart + 1; product.inCart = !product.inCart"
-                               class="fa fa-plus"></i>
-                        </div>
-                        <div *ngIf="product.inCart" class="custom-add-more-button">
-                            <div (click)="product.addedInCart = product.addedInCart - 1;
-                            product.inCart = !(product.addedInCart === 0)">
-                                <i class="fa fa-minus"></i>
-                            </div>
-                            <div class="in-cart-box">
-                                {{product.addedInCart}}
-                            </div>
-                            <div (click)="product.addedInCart = product.addedInCart + 1; ">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <add-button (updateCounter)="onUpdateCounter($event, index)" ></add-button>
                 </div>
             </div>
         </div>

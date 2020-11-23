@@ -1,3 +1,5 @@
+@import "../sandhyadeep-theme";
+
 body {
   background-color: white !important;
   font-size: 14px;
@@ -28,4 +30,55 @@ body {
 
 .active .modal-backdrop-bg {
   opacity: 0.5;
+}
+
+.default-button {
+  color: white;
+  margin: 15px 0;
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
+  height: $button-height;
+  padding: 0 10px;
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+  }
+}
+
+.primary-add-button {
+  margin: 15px 0;
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  height: 45px;
+  border: 1px solid #cc2b5e;
+  padding: 0 10px;
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    color: #cc2b5e;
+  }
+}
+
+
+ul {
+  li {
+    margin: 5px 0;
+  }
+}
+
+.border-spacing-top {
+  border-top: 10px solid #d3d3d38f;
+}
+
+.border-spacing-bottom {
+  border-bottom: 10px solid #d3d3d38f;
 }

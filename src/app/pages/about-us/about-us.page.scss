@@ -238,25 +238,6 @@
   }
 }
 
-.default-button {
-  color: white;
-  padding: 15px;
-  margin: 15px 0;
-  display: flex;
-  border-radius: 7px;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
-
-  button {
-    font-size: 16px;
-    font-weight: bold;
-    background: transparent;
-    color: white;
-  }
-}
-
-
 // Slider Style START
 .custon-nav{
   height: 48px;
@@ -293,18 +274,59 @@
   color: white;
   bottom: 30px;
 }
-.ion-image-slides {
-  margin-bottom: 10px;
-  padding: 5px 0;
-  .scroll-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    padding: 0 5px;
-    color: #666;
+
+// Styling to show the arrow on slides - start
+
+ion-grid {
+  ion-row {
+    position: relative;
+    .ion-image-slides {
+        margin-bottom: 10px;
+        padding: 5px 0;
+    }
   }
 }
+
+.scroll-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  padding: 0 16px;
+  color: white;
+  position: absolute;
+  z-index: 99999;
+  height: 100%;
+  width: 50%;
+  &.arrow-left {
+    justify-content: end;
+    background: linear-gradient(to right, #2f3032d1, #2f30327a, transparent, transparent, transparent);
+  }
+  &.arrow-right {
+    justify-content: flex-end;
+    background: linear-gradient(to left, #2f3032d1, #2f30327a, transparent, transparent, transparent);
+    left: 50%;
+  }
+}
+
+// Styling to show the arrow on slides - end
+
+// Styling to show the arrow on outside - start
+
+//.ion-image-slides {
+//  margin-bottom: 10px;
+//  padding: 5px 0;
+//  .scroll-arrow {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    font-size: 30px;
+//    padding: 0 5px;
+//    color: #666;
+//  }
+//}
+
+// Styling to show the arrow on outside - end
+
 // Slider Style STOP
 //
 

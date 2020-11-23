@@ -49,6 +49,16 @@ export class ApiService {
     return this.http.get(localUrl);
   }
 
+  getServicePackage() {
+    const localUrl = 'assets/json_files/service-packages.json';
+    return this.http.get(localUrl);
+  }
+
+  getProducts() {
+    const localUrl = 'assets/json_files/products.json';
+    return this.http.get(localUrl);
+  }
+
   commonError(err) {
     console.log(err);
   }

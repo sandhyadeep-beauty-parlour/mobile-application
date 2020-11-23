@@ -1,4 +1,27 @@
 <search-header></search-header>
 <ion-content>
-
+    <div class="feed-heading">
+        <div class="heading-text">
+            <b>Products</b>
+        </div>
+    </div>
+    <div class="border-spacing-top products-container">
+        <div *ngFor="let product of productList, let index = index" class="single-product">
+            <div (click)="goToProductDetails(product.id)" class="product-image">
+                <img src="{{product.url}}" alt="">
+            </div>
+            <div class="product-details-container">
+                <div class="product-details">
+                    <div (click)="goToProductDetails(product.id)"  class="product-title">{{product.name}}</div>
+                    <div class="price-container">
+                        <div class="product-price">{{product.price}}</div>
+                        <div class="discount-price"><del>{{product.discountedPrice}}</del></div>
+                    </div>
+                </div>
+                <div class="product-add-button">
+                    <add-button (updateCounter)="onUpdateCounter($event, index)" ></add-button>
+                </div>
+            </div>
+        </div>
+    </div>
 </ion-content>

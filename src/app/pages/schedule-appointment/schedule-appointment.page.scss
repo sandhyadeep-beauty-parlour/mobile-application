@@ -261,23 +261,6 @@
     }
   }
 }
-.default-button {
-  color: white;
-  padding: 15px;
-  margin: 5px 0;
-  display: flex;
-  border-radius: 7px;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);
-  height: $button-height;
-  button {
-    font-size: 16px;
-    font-weight: bold;
-    background: transparent;
-    color: white;
-  }
-}
 
 .feed-heading {
   display: flex;

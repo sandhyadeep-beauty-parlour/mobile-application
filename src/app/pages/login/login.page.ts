@@ -29,6 +29,8 @@ export class LoginPage implements OnInit {
         Validators.required
       ])
     });
+
+    this.loginForm.get('dob').setValue('1990-01-01T15:43:40.394Z');
   }
 
   onContinue() {

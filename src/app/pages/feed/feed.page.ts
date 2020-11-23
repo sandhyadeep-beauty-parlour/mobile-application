@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {ModalPopupPage} from '../../shared-components/modal-popup/modal-popup.page';
 import {ModalController} from '@ionic/angular';
+import {ApiService} from '../../api.service';
 
 @Component({
   selector: 'app-feed',
@@ -149,18 +150,39 @@ export class FeedPage implements OnInit {
       url: 'assets/s4.jpeg',
     }
   ];
-
-  constructor(private router: Router) { }
+  packageList = [];
+  constructor(private router: Router, private adminService: ApiService) { }
 
   ngOnInit() {
+    this.getPackages();
+  }
+
+  getPackages() {
+    this.adminService.getServicePackage().subscribe(
+        res => this.getServicePackageSuccess(res),
+        error => {
+          this.adminService.commonError(error);
+        }
+    );
+  }
+
+  getServicePackageSuccess(res) {
+    this.packageList = res;
+  }
+
+  onClickPackage(id) {
+    this.router.navigate(['home/package-details'], { queryParams: { packageId: id }});
   }
 
   goServices() {
     this.router.navigate(['home/services']);
   }
+
   onKnowMore() {
     this.router.navigate(['home/about-us']);
   }
 
-
+  onUpdateCounter(data, index) {
+    this.productImages[index].addedInCart = data;
+  }
 }

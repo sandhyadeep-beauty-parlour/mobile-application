@@ -115,10 +115,10 @@
 <!--                                  <div class="prev-icon-custom custon-nav" [class.disabled]="sliderTwo.isBeginningSlide"></div>-->
 <!--                                </span>-->
 <!--                                </ion-col>-->
-                                <div class="scroll-arrow" (click)="slidePrev(sliderTwo,slideWithNav2)">
+                                <div class="scroll-arrow arrow-left" (click)="slidePrev(sliderTwo,slideWithNav2)">
                                     <i class="fa fa-angle-left"></i>
                                 </div>
-                                <ion-col size="10">
+                                <ion-col size="12">
                                     <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2
                                                 (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
                                         <ion-slide *ngFor="let slide of sliderTwo.slidesItems">
@@ -126,7 +126,7 @@
                                         </ion-slide>
                                     </ion-slides>
                                 </ion-col>
-                                <div class="scroll-arrow" (click)="slideNext(sliderTwo,slideWithNav2)">
+                                <div class="scroll-arrow arrow-right" (click)="slideNext(sliderTwo,slideWithNav2)">
                                     <i class="fa fa-angle-right"></i>
                                 </div>
 <!--                                <ion-col size="1">-->

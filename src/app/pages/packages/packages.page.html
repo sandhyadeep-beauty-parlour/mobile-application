@@ -1,4 +1,62 @@
 <search-header></search-header>
 <ion-content>
-
+    <div class="feed-heading">
+        <div class="heading-text">
+            <b>Packages</b>
+        </div>
+    </div>
+    <div class="package-list">
+        <div *ngFor="let singlePackage of packageList, let index = index" class="package border-spacing-top">
+            <div class="package-tag">
+                {{singlePackage?.discount?.type}}
+            </div>
+            <div class="package-img">
+                <div class="image-container" *ngFor="let singleImage of singlePackage?.images">
+                    <img (click)="showImage(singleImage?.imgUrl)" src="{{singleImage?.imgUrl}}" alt="">
+                </div>
+            </div>
+            <div class="package-details-container">
+                <div class="package-title-details">
+                    <div class="package-name">{{singlePackage.name}}</div>
+                    <div class="package-price">{{singlePackage.price}} ₹</div>
+                    <div class="package-duration"><i class="fa fa-clock-o"></i>{{singlePackage.duration}}</div>
+                </div>
+                <div *ngIf="!singlePackage.addedInCart" class="add-button">
+                    <div (click)="addToCart(index)" class="primary-add-button">
+                        <button> Add</button>
+                    </div>
+                </div>
+                <div *ngIf="singlePackage.addedInCart">
+                    <div (click)="addToCart(index)" class="booked-button">
+                        <img src="assets/green-tick.png" alt="">
+                        <div>Added</div>
+                    </div>
+                </div>
+            </div>
+            <div class="package-details">
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+                    <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+                    <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>
+                    <li> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
+                </ul>
+                <div (click)="onShowDetails(singlePackage.id)" class="show-details"><u>Show Details</u></div>
+            </div>
+        </div>
+    </div>
 </ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <div class="coupon-footer">
+            <div class="coupon-button-container">
+                <div class="coupon-discount">600 ₹</div>
+                <div class="details">3 Packages</div>
+            </div>
+            <div class="default-button">
+                <button>PAY NOW</button>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-footer>

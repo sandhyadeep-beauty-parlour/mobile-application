@@ -15,7 +15,7 @@
                 <div (click)="onSelectServices(service)" class="sub-item-container">
                     <div class="sub-item-name">
                         <label class="name">{{service.serviceName}}</label>
-                        <div class="time">{{service.duration ? service.duration + ' Minutes' : ''}}</div>
+                        <div class="time"><i class="fa fa-clock-o"></i> {{service.duration ? service.duration + ' Minutes' : ''}}</div>
                     </div>
                     <div class="sub-item-price"><div class="color-666">Price: </div>
                         {{service.price}} ₹</div>

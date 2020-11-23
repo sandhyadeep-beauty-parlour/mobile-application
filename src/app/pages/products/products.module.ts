@@ -5,6 +5,7 @@ import {IonicModule} from '@ionic/angular';
 import {ProductsRoutingModule} from './products-routing.module';
 import {ProductsPage} from './products.page';
 import {SearchHeaderComponentModule} from '../../shared-components/search-header-component/search-header-component.module';
+import {AddButtonModule} from '../../shared-components/add-button/add-button.module';
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import {SearchHeaderComponentModule} from '../../shared-components/search-header
         FormsModule,
         IonicModule,
         ProductsRoutingModule,
-        SearchHeaderComponentModule
+        SearchHeaderComponentModule,
+        AddButtonModule
     ],
     declarations: [ProductsPage]
 })

@@ -54,6 +54,14 @@ const routes: Routes = [
                 path: 'payments',
                 loadChildren: () => import('../pages/payment/payment.module')
                     .then((e) => e.PaymentModule)
+            }, {
+                path: 'package-details',
+                loadChildren: () => import('../pages/packages/package-details/package-details.module')
+                    .then((e) => e.PackageDetailsModule)
+            }, {
+                path: 'product-details',
+                loadChildren: () => import('../pages/products/product-details/product-details.module')
+                    .then((e) => e.ProductDetailsModule)
             }
         ]
     }];

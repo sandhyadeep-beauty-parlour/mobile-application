@@ -1,0 +1,82 @@
+<back-logo-header></back-logo-header>
+<ion-content>
+    <ion-slides zoom class="feed-sliders" pager="false" [options]="slideOpts">
+      <ion-slide class="feed-images feed-slider">
+        <img src="{{singlePackage.url}}" alt="">
+      </ion-slide>
+    </ion-slides>
+  <div class="main-container">
+    <div class="package-details-container">
+      <div class="package-title-details">
+        <div class="package-name">{{singlePackage?.name}}</div>
+        <div class="package-price-container">
+          <div class="package-price">{{singlePackage?.price}} ₹</div>
+          <div class="package-discount-price"><del>{{singlePackage?.price}}</del> ₹</div>
+        </div>
+      </div>
+      <div *ngIf="!singlePackage?.addedInCart" class="add-button">
+        <add-button (updateCounter)="onUpdateCounter($event)" ></add-button>
+      </div>
+    </div>
+    <div class="details-blocks">
+      <div class="details-title">Product Description</div>
+      <div  class="details-list">
+        <ul>
+          <ng-container *ngFor="let measure of safetyMeasures">
+            <li>{{measure}}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer *ngIf="addedInCart > 0" class="ion-no-border">
+  <ion-toolbar>
+    <div class="product-footer">
+      <div class="product-quantity-tab">
+          <div class="product-quantity-title">Product Quantity</div>
+          <div class="product-quantity-number">{{addedInCart}}</div>
+      </div>
+      <div class="button-container">
+        <div class="default-button">
+          <button>PAY NOW</button>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+
+<style>
+  .product-footer {
+    padding: 10px 0 5px;
+    border-top: 1px solid lightgray;
+  }
+
+  .product-quantity-tab {
+    display: flex;
+    margin: 5px 15px;
+    padding: 10px;
+    background: #d3d3d37d;
+    border-radius: 7px;
+    justify-content: space-between;
+  }
+
+  .product-quantity-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .product-quantity-number {
+    border-radius: 50%;
+    background: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    padding: 0 15px;
+  }
+</style>

@@ -1,0 +1,90 @@
+<back-logo-header></back-logo-header>
+<ion-content>
+    <ion-slides zoom class="feed-sliders" pager="false" [options]="slideOpts">
+      <ion-slide class="feed-images feed-slider feed-slider-one">
+
+      </ion-slide>
+      <ion-slide class="feed-images feed-slider feed-slider-two">
+
+      </ion-slide>
+      <ion-slide class="feed-images feed-slider feed-slider-three">
+
+      </ion-slide>
+    </ion-slides>
+  <div class="main-container">
+    <div class="package-details-container">
+      <div class="package-title-details">
+        <div class="package-name">{{singlePackage?.name}}</div>
+        <div class="package-price">{{singlePackage?.price}} ₹</div>
+        <div class="package-duration"><i class="fa fa-clock-o"></i>{{singlePackage?.duration}}</div>
+      </div>
+      <div *ngIf="!singlePackage?.addedInCart" class="add-button">
+        <div (click)="addToCart(singlePackage?.id)" class="primary-add-button">
+          <button> Add</button>
+        </div>
+      </div>
+      <div *ngIf="singlePackage?.addedInCart">
+        <div (click)="addToCart(singlePackage?.id)" class="booked-button">
+          <img src="assets/green-tick.png" alt="">
+          <div>Added</div>
+        </div>
+      </div>
+    </div>
+    <div class="details-blocks">
+      <div class="details-title">Safety Measures</div>
+      <div  class="details-list">
+        <ul>
+          <ng-container *ngFor="let measure of safetyMeasures">
+            <li>{{measure}}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+
+    <div class="details-blocks">
+      <div class="details-title">Package Includes</div>
+      <div  class="details-list">
+        <ul>
+          <ng-container *ngFor="let singleEntry of singlePackage?.packageIncludes">
+            <li>{{singleEntry}}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+
+    <div class="details-blocks">
+      <div class="details-title">Suitable For</div>
+      <div  class="details-list">
+        <ul>
+          <ng-container *ngFor="let singleEntry of singlePackage?.suitableFor">
+            <li>{{singleEntry}}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+
+    <div class="details-blocks">
+      <div class="details-title">Brands Used</div>
+      <div  class="details-list">
+        <ul>
+          <ng-container *ngFor="let singleEntry of singlePackage?.brandsUsed">
+            <li>{{singleEntry}}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="coupon-footer">
+      <div class="coupon-button-container">
+        <div class="coupon-discount">600 ₹</div>
+        <div class="details">3 Packages</div>
+      </div>
+      <div class="default-button">
+        <button>PAY NOW</button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
