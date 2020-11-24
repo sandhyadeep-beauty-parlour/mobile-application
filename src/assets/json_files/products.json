@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "Product 1 - Some More Desc",
     "url": "assets/product1.jpg",
     "price": 345,
     "discountedPrice": 355,
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "name": "Product 2",
+    "name": "Product 2 - Some Brand",
     "url": "assets/product2.jpeg",
     "price": 45,
     "discountedPrice": 60,
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "name": "Product 3 - Beauty Plus - Oily Skin",
     "url": "assets/product3.jpeg",
     "price": 126,
     "discountedPrice": 150,
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Product 4",
+    "name": "Product 4 - Some other name also",
     "url": "assets/product4.jpeg",
     "price": 324,
     "discountedPrice": 387,
