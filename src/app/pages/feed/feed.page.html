@@ -1,6 +1,10 @@
 <sandhyadeep-header class="z-index-99"></sandhyadeep-header>
 <ion-content>
-<!--    <ion-searchbar color="light" class="search-bar" placeholder="Search"></ion-searchbar>-->
+    <ion-refresher slot="fixed" (ionRefresh)="refreshPage($event)">
+        <ion-refresher-content pulling-icon="arrow-dropdown" refreshing-spinner="circles">
+
+        </ion-refresher-content>
+    </ion-refresher>
     <ion-slides zoom class="feed-sliders" pager="true" [options]="slideOpts">
         <ion-slide class="feed-images feed-slider feed-slider-one">
 
@@ -15,15 +19,15 @@
 
 
     <div class="menu-container">
-<!--        <div class="feed-heading">-->
-<!--            <h2><b>Services</b></h2>-->
-<!--        </div>-->
-<!--        <div class="height-95px slide_container">-->
-<!--            <div class="slider s1 filter-bright-03"></div>-->
-<!--            <div class="slider s2 filter-bright-03"></div>-->
-<!--            <div class="slider s3 filter-bright-03"></div>-->
-<!--            <div class="slider s4 filter-bright-03"></div>-->
-<!--        </div>-->
+        <!--        <div class="feed-heading">-->
+        <!--            <h2><b>Services</b></h2>-->
+        <!--        </div>-->
+        <!--        <div class="height-95px slide_container">-->
+        <!--            <div class="slider s1 filter-bright-03"></div>-->
+        <!--            <div class="slider s2 filter-bright-03"></div>-->
+        <!--            <div class="slider s3 filter-bright-03"></div>-->
+        <!--            <div class="slider s4 filter-bright-03"></div>-->
+        <!--        </div>-->
 
         <div class="quick_menus">
             <div *ngFor="let treatment of treatments" (click)="goServices()" class="menu-container">
@@ -51,7 +55,7 @@
             <div [routerLink]="['/home/products']" class="know-more">See All <i class="fa fa-angle-right"></i></div>
         </div>
         <div class="products_container">
-            <div *ngFor="let product of productImages, let index = index" class="image-slider-container">
+            <div *ngFor="let product of productList, let index = index" class="image-slider-container">
                 <div class="slider-image">
                     <img src="{{product.url}}" alt="">
                 </div>
@@ -66,12 +70,12 @@
                                     {{product.price}} ₹
                                 </div>
                                 <div class="discounted-price">
-                                    <del> {{product.discountedPrice}} ₹ </del>
+                                    <del> {{product.discountedPrice}} ₹</del>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <add-button (updateCounter)="onUpdateCounter($event, index)" ></add-button>
+                    <add-button (updateCounter)="onUpdateCounter($event, index)"></add-button>
                 </div>
             </div>
         </div>
@@ -99,16 +103,16 @@
                 </div>
             </div>
         </div>
-<!--        <div class="safety-measures">-->
-<!--            <div class="margin-bottom-10">-->
-<!--                We use best brands in 1-time use-->
-<!--            </div>-->
-<!--            <div style="display: flex; flex-wrap: wrap">-->
-<!--                <div style="flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px" *ngFor="let brand of brandsList">-->
-<!--                    <img style="width: 70px" src={{brand.url}} alt="">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="safety-measures">-->
+        <!--            <div class="margin-bottom-10">-->
+        <!--                We use best brands in 1-time use-->
+        <!--            </div>-->
+        <!--            <div style="display: flex; flex-wrap: wrap">-->
+        <!--                <div style="flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px" *ngFor="let brand of brandsList">-->
+        <!--                    <img style="width: 70px" src={{brand.url}} alt="">-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
         <div class="feed-heading">
             <div class="heading-text">
                 <b>Our Stylist</b>
@@ -144,32 +148,32 @@
         <div class="copy-rights">
             <i class="fa fa-copyright"></i> Copyright 2020 <br> Sandhyadeep Beauty Parlour. <br>
         </div>
-<!--        <div class="feed-container">-->
-<!--            <div class="feed-image-container">-->
-<!--                <div>-->
-<!--                    <div class="feed-image feed-image-hair"></div>-->
-<!--                    <div class="feed-text"> Hair</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="feed-image-container">-->
-<!--                <div>-->
-<!--                    <div class="feed-image feed-image-skin"></div>-->
-<!--                    <div class="feed-text"> Skin</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="feed-image-container">-->
-<!--                <div>-->
-<!--                    <div class="feed-image feed-image-makeup"></div>-->
-<!--                    <div class="feed-text"> Makeup</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="feed-image-container">-->
-<!--                <div>-->
-<!--                    <div class="feed-image feed-image-course"></div>-->
-<!--                    <div class="feed-text"> Courses</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="feed-container">-->
+        <!--            <div class="feed-image-container">-->
+        <!--                <div>-->
+        <!--                    <div class="feed-image feed-image-hair"></div>-->
+        <!--                    <div class="feed-text"> Hair</div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="feed-image-container">-->
+        <!--                <div>-->
+        <!--                    <div class="feed-image feed-image-skin"></div>-->
+        <!--                    <div class="feed-text"> Skin</div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="feed-image-container">-->
+        <!--                <div>-->
+        <!--                    <div class="feed-image feed-image-makeup"></div>-->
+        <!--                    <div class="feed-text"> Makeup</div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="feed-image-container">-->
+        <!--                <div>-->
+        <!--                    <div class="feed-image feed-image-course"></div>-->
+        <!--                    <div class="feed-text"> Courses</div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 
 </ion-content>

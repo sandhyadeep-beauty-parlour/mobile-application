@@ -151,10 +151,20 @@ export class FeedPage implements OnInit {
     }
   ];
   packageList = [];
+  productList = [];
   constructor(private router: Router, private adminService: ApiService) { }
 
   ngOnInit() {
     this.getPackages();
+    this.getProducts();
+  }
+
+  refreshPage(event) {
+    setTimeout(() => {
+      this.getPackages();
+      this.getProducts();
+      event.target.complete();
+    }, 2000);
   }
 
   getPackages() {
@@ -168,6 +178,19 @@ export class FeedPage implements OnInit {
 
   getServicePackageSuccess(res) {
     this.packageList = res;
+  }
+
+  getProducts() {
+    this.adminService.getProducts().subscribe(
+        res => this.getProductSuccess(res),
+        error => {
+          this.adminService.commonError(error);
+        }
+    );
+  }
+
+  getProductSuccess(res) {
+    this.productList = res;
   }
 
   onClickPackage(id) {

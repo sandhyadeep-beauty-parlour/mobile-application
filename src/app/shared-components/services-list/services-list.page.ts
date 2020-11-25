@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {Router} from '@angular/router';
 import {ApiService} from '../../api.service';
 
@@ -8,8 +8,9 @@ import {ApiService} from '../../api.service';
   styleUrls: ['./services-list.page.scss'],
 })
 
-export class ServicesListPage implements OnInit {
+export class ServicesListPage implements OnInit, OnChanges {
   @Output() updateAmount = new EventEmitter<object>();
+  @Input() isRefreshed;
   constructor(private router: Router, private adminService: ApiService) { }
   show = '';
   show1 = false;
@@ -18,6 +19,10 @@ export class ServicesListPage implements OnInit {
   amountPurchased = 0;
   selectedServices = 0;
   ngOnInit() {
+    this.getMainServices();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
     this.getMainServices();
   }
 

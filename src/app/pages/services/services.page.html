@@ -1,12 +1,17 @@
 <search-header></search-header>
 <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refreshPage($event)">
+        <ion-refresher-content pulling-icon="arrow-dropdown" refreshing-spinner="circles">
+
+        </ion-refresher-content>
+    </ion-refresher>
     <div class="page-container">
         <div class="page-heading">
             <div class="heading-text">
                 <b>Services</b>
             </div>
         </div>
-        <service-list (updateAmount)="updateData($event)"></service-list>
+        <service-list [isRefreshed]="isRefreshed" (updateAmount)="updateData($event)"></service-list>
     </div>
 </ion-content>
 <ion-footer class="ion-no-border">

@@ -14,8 +14,18 @@ export class ServicesPage implements OnInit {
 
     amountPurchased = 0;
     selectedServices = 0;
-
+    isRefreshed = false;
     ngOnInit() {
+    }
+
+
+    refreshPage(event) {
+        setTimeout(() => {
+            this.isRefreshed = !this.isRefreshed;
+            this.amountPurchased = 0;
+            this.selectedServices = 0;
+            event.target.complete();
+        }, 1500);
     }
 
     onBookAppointment() {
